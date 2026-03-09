@@ -8,10 +8,12 @@ interface GirlCardProps {
   colorClass: string;
   onSelect: () => void;
   isOnline?: boolean;
+  /** When set, picks a unique emoji by index so no two cards share the same icon. */
+  emojiIndex?: number;
 }
 
 const FALLBACK_EMOJIS = [
-  "🦄",
+  "🦋",
   "⭐",
   "🌸",
   "🌈",
@@ -19,8 +21,13 @@ const FALLBACK_EMOJIS = [
   "🍦",
   "🧚‍♀️",
   "☀️",
-  "🦋",
   "💖",
+  "🌺",
+  "🎀",
+  "🦢",
+  "🌙",
+  "💫",
+  "🍀",
 ] as const;
 
 function getFallbackEmoji(name: string): string {
@@ -28,10 +35,11 @@ function getFallbackEmoji(name: string): string {
   return FALLBACK_EMOJIS[code % FALLBACK_EMOJIS.length];
 }
 
-export function GirlCard({ displayName, avatar, colorClass, onSelect, isOnline }: GirlCardProps) {
+export function GirlCard({ displayName, avatar, colorClass, onSelect, isOnline, emojiIndex }: GirlCardProps) {
   const [failed, setFailed] = useState(false);
   const showAvatar = !!avatar && !failed;
-  const fallbackEmoji = getFallbackEmoji(displayName);
+  const fallbackEmoji =
+    typeof emojiIndex === "number" ? FALLBACK_EMOJIS[emojiIndex % FALLBACK_EMOJIS.length] : getFallbackEmoji(displayName);
 
   return (
     <button

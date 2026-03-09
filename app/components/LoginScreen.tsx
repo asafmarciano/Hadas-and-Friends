@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import type { ApprovedUser } from "../lib/supabase";
 import { fetchApprovedGirls, validatePin, loginGirl, getCurrentGirl } from "../lib/auth";
@@ -17,6 +17,17 @@ const CARD_COLORS = [
   "from-amber-300 to-orange-400",
 ];
 
+const EMOJI_POOL_SIZE = 15;
+
+function shuffleEmojiIndices(count: number): number[] {
+  const indices = Array.from({ length: EMOJI_POOL_SIZE }, (_, i) => i);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  return indices.slice(0, count);
+}
+
 export function LoginScreen() {
   const router = useRouter();
   const [girls, setGirls] = useState<ApprovedUser[]>([]);
@@ -25,6 +36,8 @@ export function LoginScreen() {
   const [selectedGirl, setSelectedGirl] = useState<ApprovedUser | null>(null);
   const [pinError, setPinError] = useState<string | null>(null);
   const [onlineUserIds, setOnlineUserIds] = useState<Set<string>>(new Set());
+  const [emojiIndices, setEmojiIndices] = useState<number[]>([]);
+  const shuffledOnce = useRef(false);
 
   useEffect(() => {
     getCurrentGirl() && router.replace("/draw");
@@ -46,6 +59,13 @@ export function LoginScreen() {
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    if (girls.length > 0 && !shuffledOnce.current) {
+      shuffledOnce.current = true;
+      setEmojiIndices(shuffleEmojiIndices(girls.length));
+    }
+  }, [girls.length]);
 
   useEffect(() => {
     let cancelled = false;
@@ -133,6 +153,7 @@ export function LoginScreen() {
               colorClass={CARD_COLORS[i % CARD_COLORS.length]}
               onSelect={() => handleSelectGirl(girl)}
               isOnline={onlineUserIds.has(girl.id)}
+              emojiIndex={emojiIndices[i] ?? i}
             />
           ))}
         </div>
