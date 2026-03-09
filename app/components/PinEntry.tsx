@@ -30,7 +30,10 @@ export function PinEntry({ girlName, onSubmit, onBack, error }: PinEntryProps) {
             חזרה
           </button>
         </div>
-        <p className="text-gray-600 mb-6">בחרת ב־{girlName}</p>
+        <p className="mb-6 flex items-center justify-center gap-2 rounded-2xl bg-violet-50/80 py-3 px-4 text-center">
+          <span className="text-gray-600 text-sm font-medium">בחרת ב־</span>
+          <span className="text-violet-700 font-bold text-lg">{girlName}</span>
+        </p>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
             <input

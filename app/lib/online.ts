@@ -30,19 +30,19 @@ export function stopPresence() {
 /** Call on logout or page unload so the user drops off the online list quickly. Returns a promise so callers can await. */
 export function markOffline(session: GirlSession): Promise<void> {
   const oldSeen = new Date(Date.now() - 40 * 1000).toISOString();
-  return supabase
-    .from("online_users")
-    .upsert(
-      {
-        user_id: session.id,
-        last_seen: oldSeen,
-        display_name: session.name,
-        avatar: session.avatar,
-      },
-      { onConflict: "user_id", ignoreDuplicates: false }
-    )
-    .then(() => {})
-    .catch(() => {});
+  return Promise.resolve(
+    supabase
+      .from("online_users")
+      .upsert(
+        {
+          user_id: session.id,
+          last_seen: oldSeen,
+          display_name: session.name,
+          avatar: session.avatar,
+        },
+        { onConflict: "user_id", ignoreDuplicates: false }
+      )
+  ).then(() => {}, () => {});
 }
 
 export async function upsertPresence(session: GirlSession): Promise<void> {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { Suspense, useEffect, useState, useRef, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { getCurrentGirl, logoutGirl } from "../lib/auth";
 import { getLatestDrawingForGirl, getDrawingById, saveDrawingToGallery } from "../lib/drawings";
@@ -27,14 +27,14 @@ const DEFAULT_COLOR = "#f9a8d4";
 const DRAWINGS_BUCKET = "drawings";
 const SIGNED_URL_EXPIRY_SEC = 60 * 60;
 
-export default function DrawPage() {
+function DrawPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const canvasRef = useRef<FreeDrawCanvasHandle | null>(null);
   const sessionRef = useRef<{ id: string; name: string; avatar: string | null } | null>(null);
   const [mounted, setMounted] = useState(false);
   const [color, setColor] = useState(DEFAULT_COLOR);
-  const [brushSize, setBrushSize] = useState(BRUSH_SIZES[1].size);
+  const [brushSize, setBrushSize] = useState<number>(BRUSH_SIZES[1].size);
   const [isEraser, setIsEraser] = useState(false);
   const [initialDrawingUrl, setInitialDrawingUrl] = useState<string | null>(null);
   const [initialReady, setInitialReady] = useState(false);
@@ -283,5 +283,19 @@ export default function DrawPage() {
         />
       </main>
     </div>
+  );
+}
+
+export default function DrawPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
+          <p className="text-xl text-gray-700">טוען...</p>
+        </main>
+      }
+    >
+      <DrawPageContent />
+    </Suspense>
   );
 }

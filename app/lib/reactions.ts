@@ -63,5 +63,7 @@ export function subscribeReactions(toUserId: string, onReaction: (p: ReactionPay
       }
     )
     .subscribe();
-  return () => supabase.removeChannel(ch);
+  return () => {
+    void supabase.removeChannel(ch);
+  };
 }

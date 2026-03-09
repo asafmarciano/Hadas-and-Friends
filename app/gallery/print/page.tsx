@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { Suspense, useEffect, useState, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { getCurrentGirl } from "../../lib/auth";
 import { getDrawingById } from "../../lib/drawings";
@@ -27,7 +27,7 @@ function PrintLoadingShell() {
   );
 }
 
-export default function GalleryPrintPage() {
+function GalleryPrintContent() {
   const [mounted, setMounted] = useState(false);
   const searchParams = useSearchParams();
   const [imageUrl, setImageUrl] = useState<string | null>(null);
@@ -95,5 +95,13 @@ export default function GalleryPrintPage() {
         />
       )}
     </div>
+  );
+}
+
+export default function GalleryPrintPage() {
+  return (
+    <Suspense fallback={<PrintLoadingShell />}>
+      <GalleryPrintContent />
+    </Suspense>
   );
 }
