@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState, useRef, useCallback } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { getCurrentGirl, logoutGirl } from "../lib/auth";
-import { getLatestDrawingForGirl, saveDrawingToGallery } from "../lib/drawings";
+import { getLatestDrawingForGirl, getDrawingById, saveDrawingToGallery } from "../lib/drawings";
+import { supabase } from "../lib/supabase";
 import { startPresence, stopPresence, markOffline } from "../lib/online";
 import {
   subscribeReactions,
@@ -23,8 +24,12 @@ import { BRUSH_SIZES } from "../components/BrushSizePicker";
 
 const DEFAULT_COLOR = "#f9a8d4";
 
+const DRAWINGS_BUCKET = "drawings";
+const SIGNED_URL_EXPIRY_SEC = 60 * 60;
+
 export default function DrawPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const canvasRef = useRef<FreeDrawCanvasHandle | null>(null);
   const sessionRef = useRef<{ id: string; name: string; avatar: string | null } | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -32,6 +37,7 @@ export default function DrawPage() {
   const [brushSize, setBrushSize] = useState(BRUSH_SIZES[1].size);
   const [isEraser, setIsEraser] = useState(false);
   const [initialDrawingUrl, setInitialDrawingUrl] = useState<string | null>(null);
+  const [initialReady, setInitialReady] = useState(false);
   const [notifications, setNotifications] = useState<{ id: string; message: string; type: ReactionType }[]>([]);
   const [saving, setSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState<string | null>(null);
@@ -50,10 +56,29 @@ export default function DrawPage() {
     if (!mounted) return;
     const girl = getCurrentGirl();
     if (!girl) return;
+    const editId = searchParams.get("edit");
+    if (editId) {
+      (async () => {
+        try {
+          const drawing = await getDrawingById(editId, girl.id);
+          if (drawing?.storage_path) {
+            const { data } = await supabase.storage
+              .from(DRAWINGS_BUCKET)
+              .createSignedUrl(drawing.storage_path, SIGNED_URL_EXPIRY_SEC);
+            setInitialDrawingUrl(data?.signedUrl ?? null);
+          } else setInitialDrawingUrl(null);
+        } catch {
+          setInitialDrawingUrl(null);
+        }
+        setInitialReady(true);
+      })();
+      return;
+    }
     const draftKey = `draft_drawing_${girl.id}`;
     const draft = typeof localStorage !== "undefined" ? localStorage.getItem(draftKey) : null;
     if (draft) {
       setInitialDrawingUrl(draft);
+      setInitialReady(true);
       return;
     }
     (async () => {
@@ -63,8 +88,9 @@ export default function DrawPage() {
       } catch {
         setInitialDrawingUrl(null);
       }
+      setInitialReady(true);
     })();
-  }, [mounted]);
+  }, [mounted, searchParams]);
 
   useEffect(() => {
     return () => {
@@ -166,7 +192,7 @@ export default function DrawPage() {
     }
   };
 
-  if (!mounted || !girl) {
+  if (!mounted || !girl || !initialReady) {
     return (
       <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
         <p className="text-xl text-gray-700">טוען...</p>

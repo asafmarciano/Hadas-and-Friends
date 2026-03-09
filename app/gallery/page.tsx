@@ -158,20 +158,45 @@ export default function GalleryPage() {
                     </div>
                   )}
                 </div>
-                <div className="flex items-center justify-between gap-2 px-4 py-3">
-                  <span className="text-xs text-gray-500">
-                    {new Date(d.created_at).toLocaleString("he-IL", {
-                      dateStyle: "short",
-                      timeStyle: "short",
-                    })}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => handleDelete(d)}
-                    className="rounded-2xl border-2 border-red-200 bg-red-50 px-3 py-1 text-xs font-semibold text-red-700 hover:bg-red-100"
-                  >
-                    מחקי
-                  </button>
+                <div className="flex flex-col gap-2 px-4 py-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs text-gray-500">
+                      {new Date(d.created_at).toLocaleString("he-IL", {
+                        dateStyle: "short",
+                        timeStyle: "short",
+                      })}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => handleDelete(d)}
+                      className="rounded-2xl border-2 border-red-200 bg-red-50 px-3 py-1 text-xs font-semibold text-red-700 hover:bg-red-100"
+                    >
+                      מחקי
+                    </button>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Link
+                      href={`/gallery/print?drawingId=${d.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-2xl border-2 border-violet-200 bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700 hover:bg-violet-100"
+                    >
+                      הדפסי
+                    </Link>
+                    <Link
+                      href={`/draw?edit=${d.id}`}
+                      className="rounded-2xl border-2 border-violet-200 bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700 hover:bg-violet-100"
+                    >
+                      עריכת ציור
+                    </Link>
+                    <a
+                      href={signedUrl ? `mailto:?subject=${encodeURIComponent("הציור שלי")}&body=${encodeURIComponent(signedUrl)}` : "#"}
+                      className="rounded-2xl border-2 border-violet-200 bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700 hover:bg-violet-100"
+                      onClick={(e) => !signedUrl && e.preventDefault()}
+                    >
+                      שלחי במייל
+                    </a>
+                  </div>
                 </div>
               </div>
               );

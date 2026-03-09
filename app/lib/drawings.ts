@@ -90,6 +90,21 @@ export async function getLatestDrawingForGirl(girlId: string): Promise<DrawingRe
   return (data as DrawingRecord) ?? null;
 }
 
+export async function getDrawingById(drawingId: string, girlId: string): Promise<DrawingRecord | null> {
+  const { data, error } = await supabase
+    .from("drawings")
+    .select("id, girl_id, image_url, storage_path, created_at")
+    .eq("id", drawingId)
+    .eq("girl_id", girlId)
+    .maybeSingle();
+
+  if (error && error.code !== "PGRST116") {
+    console.error("getDrawingById error", error);
+    throw error;
+  }
+  return (data as DrawingRecord) ?? null;
+}
+
 /** Returns image_url if valid, otherwise builds public URL from storage_path for older/broken rows. */
 export function getDisplayImageUrl(record: DrawingRecord): string {
   const url = record.image_url?.trim();
