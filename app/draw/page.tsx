@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { getCurrentGirl, logoutGirl } from "../lib/auth";
-import { getDrawing, saveDrawing, clearDrawing } from "../lib/drawings";
+import { getLatestDrawingForGirl, saveDrawingToGallery } from "../lib/drawings";
 import { startPresence, stopPresence, markOffline } from "../lib/online";
 import {
   subscribeReactions,
@@ -31,8 +31,11 @@ export default function DrawPage() {
   const [color, setColor] = useState(DEFAULT_COLOR);
   const [brushSize, setBrushSize] = useState(BRUSH_SIZES[1].size);
   const [isEraser, setIsEraser] = useState(false);
-  const [savedDataUrl, setSavedDataUrl] = useState<string | null>(null);
+  const [initialDrawingUrl, setInitialDrawingUrl] = useState<string | null>(null);
   const [notifications, setNotifications] = useState<{ id: string; message: string; type: ReactionType }[]>([]);
+  const [saving, setSaving] = useState(false);
+  const [saveMessage, setSaveMessage] = useState<string | null>(null);
+  const draftSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -47,9 +50,27 @@ export default function DrawPage() {
     if (!mounted) return;
     const girl = getCurrentGirl();
     if (!girl) return;
-    const data = getDrawing(girl.id);
-    setSavedDataUrl(data);
+    const draftKey = `draft_drawing_${girl.id}`;
+    const draft = typeof localStorage !== "undefined" ? localStorage.getItem(draftKey) : null;
+    if (draft) {
+      setInitialDrawingUrl(draft);
+      return;
+    }
+    (async () => {
+      try {
+        const latest = await getLatestDrawingForGirl(girl.id);
+        setInitialDrawingUrl(latest?.image_url ?? null);
+      } catch {
+        setInitialDrawingUrl(null);
+      }
+    })();
   }, [mounted]);
+
+  useEffect(() => {
+    return () => {
+      if (draftSaveTimerRef.current) clearTimeout(draftSaveTimerRef.current);
+    };
+  }, []);
 
   const girl = mounted ? getCurrentGirl() : null;
 
@@ -104,15 +125,45 @@ export default function DrawPage() {
   };
 
   const handleClear = () => {
+    if (girl) {
+      try {
+        localStorage.removeItem(`draft_drawing_${girl.id}`);
+      } catch {}
+    }
     canvasRef.current?.clear();
-    if (girl) clearDrawing(girl.id);
   };
 
-  const handleSave = () => {
-    const dataUrl = canvasRef.current?.getImageDataUrl();
-    if (!dataUrl || !girl) return;
-    saveDrawing(girl.id, dataUrl);
-    setSavedDataUrl(dataUrl);
+  const handleStrokeEnd = useCallback(() => {
+    if (!girl) return;
+    if (draftSaveTimerRef.current) clearTimeout(draftSaveTimerRef.current);
+    draftSaveTimerRef.current = setTimeout(() => {
+      draftSaveTimerRef.current = null;
+      const dataUrl = canvasRef.current?.getImageDataUrl();
+      if (dataUrl) {
+        try {
+          localStorage.setItem(`draft_drawing_${girl.id}`, dataUrl);
+        } catch (e) {
+          console.warn("draft save failed", e);
+        }
+      }
+    }, 500);
+  }, [girl?.id]);
+
+  const handleSaveDrawing = async () => {
+    if (!girl || !canvasRef.current) return;
+    const dataUrl = canvasRef.current.getImageDataUrl();
+    if (!dataUrl) return;
+    setSaving(true);
+    try {
+      await saveDrawingToGallery(girl.id, dataUrl);
+      setSaveMessage("הציור נשמר");
+    } catch (e) {
+      console.error("save drawing failed", e);
+      setSaveMessage("שמירה נכשלה, נסי שוב");
+    } finally {
+      setSaving(false);
+      window.setTimeout(() => setSaveMessage(null), 2000);
+    }
   };
 
   if (!mounted || !girl) {
@@ -135,12 +186,17 @@ export default function DrawPage() {
         {notifications.map((n) => (
           <ReactionBanner key={n.id} message={n.message} />
         ))}
+        {saveMessage && (
+          <div className="mx-auto rounded-2xl bg-emerald-50 border border-emerald-200 px-4 py-2 text-sm font-semibold text-emerald-700 shadow-md">
+            {saveMessage}
+          </div>
+        )}
       </div>
       <ReactionEffectsLayer
         reactions={reactionInstances}
         onExpired={(id) => setNotifications((prev) => prev.filter((n) => n.id !== id))}
       />
-      <header className="flex flex-wrap items-center justify-between gap-4 px-4 py-4 border-b border-white/60 bg-white/60 backdrop-blur-sm">
+      <header className="flex flex-wrap items-center justify-between gap-3 px-3 py-3 border-b border-white/60 bg-white/60 backdrop-blur-sm">
         <div className="flex items-center gap-3">
           {girl.avatar ? (
             <img
@@ -164,6 +220,12 @@ export default function DrawPage() {
         </div>
         <div className="flex items-center gap-3">
           <OnlineGirlsList currentUserId={girl.id} onSendReaction={handleSendReaction} />
+          <a
+            href="/gallery"
+            className="rounded-2xl border-2 border-violet-200 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-700 hover:bg-violet-100 shrink-0"
+          >
+            הציורים שלי
+          </a>
           <button
             type="button"
             onClick={handleLogout}
@@ -174,13 +236,14 @@ export default function DrawPage() {
         </div>
       </header>
 
-      <main className="flex-1 flex flex-col items-center gap-6 px-4 py-6 pb-10">
+      <main className="flex-1 flex flex-col items-center gap-4 px-3 py-4 pb-6">
         <FreeDrawCanvas
           ref={canvasRef}
           brushColor={color}
           brushSize={brushSize}
           isEraser={isEraser}
-          initialDataUrl={savedDataUrl}
+          initialDataUrl={initialDrawingUrl}
+          onStrokeEnd={handleStrokeEnd}
         />
         <DrawingToolbar
           selectedColor={color}
@@ -190,7 +253,7 @@ export default function DrawPage() {
           isEraser={isEraser}
           onEraserToggle={() => setIsEraser((v) => !v)}
           onClear={handleClear}
-          onSave={handleSave}
+          onSave={handleSaveDrawing}
         />
       </main>
     </div>

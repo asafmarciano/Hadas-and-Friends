@@ -15,6 +15,7 @@ type Props = {
   brushSize: number;
   isEraser: boolean;
   initialDataUrl?: string | null;
+  onStrokeEnd?: () => void;
 };
 
 function getPoint(canvas: HTMLCanvasElement, x: number, y: number) {
@@ -26,7 +27,7 @@ function getPoint(canvas: HTMLCanvasElement, x: number, y: number) {
 }
 
 export const FreeDrawCanvas = forwardRef<FreeDrawCanvasHandle, Props>(function FreeDrawCanvas(
-  { brushColor, brushSize, isEraser, initialDataUrl },
+  { brushColor, brushSize, isEraser, initialDataUrl, onStrokeEnd },
   ref
 ) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -115,12 +116,16 @@ export const FreeDrawCanvas = forwardRef<FreeDrawCanvasHandle, Props>(function F
   );
 
   const onEnd = useCallback(() => {
+    const wasDrawing = isDrawing.current;
     isDrawing.current = false;
     last.current = null;
-  }, []);
+    if (wasDrawing && onStrokeEnd) {
+      onStrokeEnd();
+    }
+  }, [onStrokeEnd]);
 
   return (
-    <div className="relative w-full max-w-3xl max-h-[70vh] rounded-3xl border-4 border-white shadow-xl bg-white overflow-hidden touch-none" style={{ aspectRatio: "4/3", touchAction: "none" }}>
+    <div className="relative w-full max-w-3xl max-h-[62vh] rounded-3xl border-4 border-white shadow-xl bg-white overflow-hidden touch-none" style={{ aspectRatio: "4/3", touchAction: "none" }}>
       <canvas
         ref={canvasRef}
         width={W}

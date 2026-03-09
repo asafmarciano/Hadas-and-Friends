@@ -1,7 +1,7 @@
 "use client";
 
 import { ColorPalette } from "./ColorPalette";
-import { BrushSizePicker, BRUSH_SIZES } from "./BrushSizePicker";
+import { BrushSizePicker } from "./BrushSizePicker";
 
 interface DrawingToolbarProps {
   selectedColor: string;
@@ -25,9 +25,9 @@ export function DrawingToolbar({
   onSave,
 }: DrawingToolbarProps) {
   return (
-    <div className="w-full max-w-3xl flex flex-col gap-4 bg-white/70 rounded-3xl border-2 border-white shadow-lg px-4 py-4">
+    <div className="w-full max-w-3xl flex flex-col gap-3 bg-white/80 rounded-3xl border-2 border-white shadow-lg px-3 py-3">
       <ColorPalette selectedColor={selectedColor} onSelectColor={onSelectColor} />
-      <div className="flex flex-wrap items-center justify-center gap-4">
+      <div className="flex flex-wrap items-center justify-center gap-3">
         <BrushSizePicker selectedSize={brushSize} onSelectSize={onBrushSizeChange} />
         <button
           type="button"
@@ -50,7 +50,7 @@ export function DrawingToolbar({
           onClick={onSave}
           className="min-w-[44px] h-11 px-4 rounded-2xl border-2 border-emerald-200 bg-emerald-50 font-semibold text-emerald-700 hover:bg-emerald-100"
         >
-          💾 שמור
+          💾 שמרי לגלריה
         </button>
       </div>
     </div>
