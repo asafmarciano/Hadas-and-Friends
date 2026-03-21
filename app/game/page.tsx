@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getCurrentGirl, logoutGirl } from "../lib/auth";
 import { BRUSH_SIZES } from "../components/BrushSizePicker";
@@ -30,9 +30,6 @@ const PALETTE = [
   "#171717",
 ] as const;
 
-const VB_W = 200;
-const VB_H = 240;
-
 type Phase = "paint" | "quiz" | "complete";
 
 type LevelDef = {
@@ -42,7 +39,6 @@ type LevelDef = {
     choices: [string, string, string];
     correctIndex: 0 | 1 | 2;
   };
-  background: ReactNode;
 };
 
 const LEVELS: LevelDef[] = [
@@ -53,19 +49,6 @@ const LEVELS: LevelDef[] = [
       choices: ["א", "ע", "ט"],
       correctIndex: 1,
     },
-    background: (
-      <svg
-        viewBox={`0 0 ${VB_W} ${VB_H}`}
-        className="h-full max-h-full w-auto max-w-full"
-        preserveAspectRatio="xMidYMid meet"
-        aria-hidden
-      >
-        <rect width={VB_W} height={VB_H} fill="#fafafa" />
-        <rect x={0} y={0} width={200} height={120} fill="#e5e7eb" stroke="#94a3b8" strokeWidth={1.5} />
-        <rect x={82} y={125} width={36} height={115} rx={5} fill="#e5e7eb" stroke="#94a3b8" strokeWidth={1.5} />
-        <ellipse cx={100} cy={88} rx={58} ry={48} fill="#e5e7eb" stroke="#94a3b8" strokeWidth={1.5} />
-      </svg>
-    ),
   },
   {
     id: "house",
@@ -74,25 +57,16 @@ const LEVELS: LevelDef[] = [
       choices: ["ב", "ד", "ל"],
       correctIndex: 0,
     },
-    background: (
-      <svg
-        viewBox={`0 0 ${VB_W} ${VB_H}`}
-        className="h-full max-h-full w-auto max-w-full"
-        preserveAspectRatio="xMidYMid meet"
-        aria-hidden
-      >
-        <rect width={VB_W} height={VB_H} fill="#fafafa" />
-        <rect x={0} y={0} width={200} height={100} fill="#bae6fd" stroke="#94a3b8" strokeWidth={1.5} />
-        <rect x={0} y={100} width={200} height={140} fill="#d9f99d" stroke="#94a3b8" strokeWidth={1.5} />
-        <polygon points="60,135 100,95 140,135" fill="#e5e7eb" stroke="#94a3b8" strokeWidth={1.5} />
-        <rect x={65} y={135} width={70} height={75} fill="#e5e7eb" stroke="#94a3b8" strokeWidth={1.5} />
-        <rect x={115} y={155} width={14} height={22} fill="#f3f4f6" stroke="#94a3b8" strokeWidth={1} />
-        <rect x={78} y={158} width={16} height={14} fill="#fef3c7" stroke="#94a3b8" strokeWidth={1} />
-        <rect x={108} y={158} width={16} height={14} fill="#fef3c7" stroke="#94a3b8" strokeWidth={1} />
-      </svg>
-    ),
   },
 ];
+
+function pickColoringFilename(filenames: string[], previous: string | null): string | null {
+  if (filenames.length === 0) return null;
+  if (filenames.length === 1) return filenames[0];
+  const pool = previous !== null ? filenames.filter((f) => f !== previous) : filenames;
+  const choices = pool.length > 0 ? pool : filenames;
+  return choices[Math.floor(Math.random() * choices.length)] ?? null;
+}
 
 function applyCanvasPixelSize(canvas: HTMLCanvasElement, cssWidth: number, cssHeight: number) {
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -128,6 +102,46 @@ export default function GamePage() {
   const undoStackRef = useRef<ImageData[]>([]);
   const [canUndo, setCanUndo] = useState(false);
   const sessionRef = useRef<{ id: string; name: string; avatar: string | null } | null>(null);
+
+  const [coloringFilenames, setColoringFilenames] = useState<string[]>([]);
+  const [coloringImageUrl, setColoringImageUrl] = useState<string | null>(null);
+  const [coloringListReady, setColoringListReady] = useState(false);
+  const prevColoringFilenameRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch("/api/coloring-images");
+        const data = await res.json();
+        if (!cancelled && Array.isArray(data.files)) {
+          setColoringFilenames(data.files);
+        }
+      } catch {
+        if (!cancelled) setColoringFilenames([]);
+      } finally {
+        if (!cancelled) setColoringListReady(true);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!coloringListReady) return;
+    if (coloringFilenames.length === 0) {
+      setColoringImageUrl(null);
+      return;
+    }
+    const chosen = pickColoringFilename(coloringFilenames, prevColoringFilenameRef.current);
+    if (chosen === null) {
+      setColoringImageUrl(null);
+      return;
+    }
+    prevColoringFilenameRef.current = chosen;
+    setColoringImageUrl(`/coloring/${encodeURIComponent(chosen)}`);
+  }, [levelIndex, coloringFilenames, coloringListReady]);
 
   useEffect(() => {
     setMounted(true);
@@ -231,7 +245,7 @@ export default function GamePage() {
       cancelAnimationFrame(id);
       ro.disconnect();
     };
-  }, [girlId, levelIndex, resizeCanvasToWrap, resetUndoToEmpty]);
+  }, [girlId, levelIndex, coloringImageUrl, resizeCanvasToWrap, resetUndoToEmpty]);
 
   /** Pointer → canvas CSS pixels (matches ctx after setTransform(dpr)) */
   const getCanvasCoords = useCallback((clientX: number, clientY: number) => {
@@ -423,8 +437,22 @@ export default function GamePage() {
                 {/* Full-area drawable canvas; line art centered underneath */}
                 <div className="relative flex-1 min-h-0 rounded-xl overflow-hidden ring-2 ring-violet-100/90 shadow-inner bg-white/60">
                   <div ref={wrapRef} className="absolute inset-0 w-full h-full min-h-0">
-                    <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none p-0.5">
-                      {level?.background}
+                    <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none p-0.5 bg-neutral-100">
+                      {!coloringListReady ? (
+                        <span className="text-sm font-medium text-gray-400">טוען תמונה…</span>
+                      ) : coloringImageUrl ? (
+                        <img
+                          key={coloringImageUrl}
+                          src={coloringImageUrl}
+                          alt=""
+                          className="h-full max-h-full w-auto max-w-full object-contain pointer-events-none select-none"
+                          draggable={false}
+                        />
+                      ) : (
+                        <span className="text-sm font-medium text-gray-400 text-center px-2">
+                          אין תמונות זמינות
+                        </span>
+                      )}
                     </div>
                     <canvas
                       ref={drawCanvasRef}
