@@ -97,7 +97,7 @@ export function LoginScreen() {
       name: selectedGirl.display_name,
       avatar: selectedGirl.avatar,
     });
-    router.replace("/draw");
+    router.replace("/choose");
   };
 
   const handleBack = () => {
