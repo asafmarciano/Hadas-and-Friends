@@ -14,7 +14,7 @@ export type DrawingSessionNotification = {
 };
 
 type DrawingSessionShellProps = {
-  girl: { id: string; name: string; avatar: string | null };
+  girl: { id: string; name: string; avatar_url: string | null };
   notifications: DrawingSessionNotification[];
   reactionInstances: ReactionInstance[];
   onReactionExpired: (id: string) => void;
@@ -59,9 +59,9 @@ export function DrawingSessionShell({
       <ReactionEffectsLayer reactions={reactionInstances} onExpired={onReactionExpired} />
       <header className="flex flex-wrap items-center justify-between gap-3 px-3 py-3 border-b border-white/60 bg-white/60 backdrop-blur-sm">
         <div className="flex items-center gap-3">
-          {girl.avatar ? (
+          {girl.avatar_url ? (
             <img
-              src={girl.avatar}
+              src={girl.avatar_url}
               alt=""
               onError={(e) => {
                 e.currentTarget.style.display = "none";
@@ -73,7 +73,7 @@ export function DrawingSessionShell({
           ) : null}
           <div
             className="w-10 h-10 rounded-full bg-violet-200 flex items-center justify-center text-lg"
-            style={{ display: girl.avatar ? "none" : "flex" }}
+            style={{ display: girl.avatar_url ? "none" : "flex" }}
           >
             👤
           </div>

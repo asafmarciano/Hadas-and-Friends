@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { ApprovedUserAvatar } from "./ApprovedUserAvatar";
 
 interface GirlCardProps {
   displayName: string;
@@ -12,35 +12,7 @@ interface GirlCardProps {
   emojiIndex?: number;
 }
 
-const FALLBACK_EMOJIS = [
-  "🦋",
-  "⭐",
-  "🌸",
-  "🌈",
-  "🧜‍♀️",
-  "🍦",
-  "🧚‍♀️",
-  "☀️",
-  "💖",
-  "🌺",
-  "🎀",
-  "🦢",
-  "🌙",
-  "💫",
-  "🍀",
-] as const;
-
-function getFallbackEmoji(name: string): string {
-  const code = Array.from(name).reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
-  return FALLBACK_EMOJIS[code % FALLBACK_EMOJIS.length];
-}
-
 export function GirlCard({ displayName, avatar, colorClass, onSelect, isOnline, emojiIndex }: GirlCardProps) {
-  const [failed, setFailed] = useState(false);
-  const showAvatar = !!avatar && !failed;
-  const fallbackEmoji =
-    typeof emojiIndex === "number" ? FALLBACK_EMOJIS[emojiIndex % FALLBACK_EMOJIS.length] : getFallbackEmoji(displayName);
-
   return (
     <button
       type="button"
@@ -55,18 +27,7 @@ export function GirlCard({ displayName, avatar, colorClass, onSelect, isOnline, 
       <div
         className={`absolute inset-0 rounded-3xl opacity-60 bg-gradient-to-br ${colorClass} pointer-events-none`}
       />
-      {showAvatar ? (
-        <img
-          src={avatar!}
-          alt=""
-          onError={() => setFailed(true)}
-          className="relative z-10 w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-white shadow-md"
-        />
-      ) : (
-        <div className="relative z-10 flex items-center justify-center text-5xl sm:text-6xl drop-shadow-sm">
-          {fallbackEmoji}
-        </div>
-      )}
+      <ApprovedUserAvatar avatar={avatar} displayName={displayName} emojiIndex={emojiIndex} />
       <span className="relative z-10 mt-2 text-xl sm:text-2xl font-bold text-gray-900" dir="rtl">
         {displayName}
       </span>

@@ -38,7 +38,7 @@ export function markOffline(session: GirlSession): Promise<void> {
           user_id: session.id,
           last_seen: oldSeen,
           display_name: session.name,
-          avatar: session.avatar,
+          avatar: session.avatar_url,
         },
         { onConflict: "user_id", ignoreDuplicates: false }
       )
@@ -51,7 +51,7 @@ export async function upsertPresence(session: GirlSession): Promise<void> {
       user_id: session.id,
       last_seen: new Date().toISOString(),
       display_name: session.name,
-      avatar: session.avatar,
+      avatar: session.avatar_url,
     },
     { onConflict: "user_id", ignoreDuplicates: false }
   );

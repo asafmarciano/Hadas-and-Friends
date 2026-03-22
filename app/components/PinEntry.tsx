@@ -4,17 +4,19 @@ import { useState } from "react";
 
 interface PinEntryProps {
   girlName: string;
-  onSubmit: (pin: string) => void;
+  onSubmit: (pin: string) => void | Promise<void>;
   onBack: () => void;
   error: string | null;
+  /** True while verifying PIN / loading next step */
+  busy?: boolean;
 }
 
-export function PinEntry({ girlName, onSubmit, onBack, error }: PinEntryProps) {
+export function PinEntry({ girlName, onSubmit, onBack, error, busy = false }: PinEntryProps) {
   const [pin, setPin] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(pin);
+    await Promise.resolve(onSubmit(pin));
   };
 
   return (
@@ -44,7 +46,8 @@ export function PinEntry({ girlName, onSubmit, onBack, error }: PinEntryProps) {
               value={pin}
               onChange={(e) => setPin(e.target.value.replace(/\D/g, ""))}
               placeholder="קוד"
-              className="w-full px-5 py-4 rounded-2xl border-2 border-violet-200 text-center text-xl tracking-[0.4em] focus:border-violet-400 focus:ring-2 focus:ring-violet-200 focus:outline-none transition-shadow"
+              disabled={busy}
+              className="w-full px-5 py-4 rounded-2xl border-2 border-violet-200 text-center text-xl tracking-[0.4em] focus:border-violet-400 focus:ring-2 focus:ring-violet-200 focus:outline-none transition-shadow disabled:opacity-60"
               dir="ltr"
             />
             {error && (
@@ -53,9 +56,10 @@ export function PinEntry({ girlName, onSubmit, onBack, error }: PinEntryProps) {
           </div>
           <button
             type="submit"
-            className="w-full py-4 rounded-2xl bg-violet-500 text-white text-lg font-semibold hover:bg-violet-600 transition-colors shadow-md"
+            disabled={busy}
+            className="w-full py-4 rounded-2xl bg-violet-500 text-white text-lg font-semibold hover:bg-violet-600 transition-colors shadow-md disabled:opacity-60 disabled:pointer-events-none"
           >
-            כניסה
+            {busy ? "טוען…" : "כניסה"}
           </button>
         </form>
       </div>

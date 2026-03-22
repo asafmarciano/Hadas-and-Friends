@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { getCurrentGirl, logoutGirl } from "../lib/auth";
+import { getCurrentGirl, logoutGirl, useSessionAvatarHydration } from "../lib/auth";
 import { BRUSH_SIZES } from "../components/BrushSizePicker";
 import { DrawingSessionShell } from "../components/DrawingSessionShell";
 import { type ReactionInstance } from "../components/ReactionEffectsLayer";
@@ -101,7 +101,7 @@ export default function GamePage() {
   const didDrawStrokeRef = useRef(false);
   const undoStackRef = useRef<ImageData[]>([]);
   const [canUndo, setCanUndo] = useState(false);
-  const sessionRef = useRef<{ id: string; name: string; avatar: string | null } | null>(null);
+  const sessionRef = useRef<{ id: string; name: string; avatar_url: string | null } | null>(null);
 
   const [coloringFilenames, setColoringFilenames] = useState<string[]>([]);
   const [coloringImageUrl, setColoringImageUrl] = useState<string | null>(null);
@@ -147,6 +147,8 @@ export default function GamePage() {
     setMounted(true);
   }, []);
 
+  useSessionAvatarHydration(mounted);
+
   useEffect(() => {
     if (!mounted) return;
     if (!getCurrentGirl()) router.replace("/");
@@ -163,7 +165,7 @@ export default function GamePage() {
     if (!girl) return;
     startPresence(girl);
     return () => stopPresence();
-  }, [girl?.id]);
+  }, [girl?.id, girl?.avatar_url]);
 
   useEffect(() => {
     const handleUnload = () => {

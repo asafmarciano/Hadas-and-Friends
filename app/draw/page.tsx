@@ -2,7 +2,7 @@
 
 import { Suspense, useEffect, useState, useRef, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { getCurrentGirl, logoutGirl } from "../lib/auth";
+import { getCurrentGirl, logoutGirl, useSessionAvatarHydration } from "../lib/auth";
 import { getLatestDrawingForGirl, getDrawingById, saveDrawingToGallery } from "../lib/drawings";
 import { supabase } from "../lib/supabase";
 import { startPresence, stopPresence, markOffline } from "../lib/online";
@@ -30,7 +30,7 @@ function DrawPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const canvasRef = useRef<FreeDrawCanvasHandle | null>(null);
-  const sessionRef = useRef<{ id: string; name: string; avatar: string | null } | null>(null);
+  const sessionRef = useRef<{ id: string; name: string; avatar_url: string | null } | null>(null);
   const [mounted, setMounted] = useState(false);
   const [color, setColor] = useState(DEFAULT_COLOR);
   const [brushSize, setBrushSize] = useState<number>(BRUSH_SIZES[1].size);
@@ -45,6 +45,8 @@ function DrawPageContent() {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useSessionAvatarHydration(mounted);
 
   useEffect(() => {
     if (!mounted) return;
@@ -107,7 +109,7 @@ function DrawPageContent() {
     if (!girl) return;
     startPresence(girl);
     return () => stopPresence();
-  }, [girl?.id]);
+  }, [girl?.id, girl?.avatar_url]);
 
   useEffect(() => {
     const handleUnload = () => {

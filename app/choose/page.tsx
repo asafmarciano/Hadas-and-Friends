@@ -2,16 +2,20 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { getCurrentGirl, logoutGirl } from "../lib/auth";
+import { getCurrentGirl, logoutGirl, updateSessionAvatarUrl, useSessionAvatarHydration } from "../lib/auth";
 import { markOffline, stopPresence } from "../lib/online";
+import { AvatarPicker } from "../components/AvatarPicker";
 
 export default function ChooseModePage() {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
+  const [avatarPickerOpen, setAvatarPickerOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useSessionAvatarHydration(mounted);
 
   useEffect(() => {
     if (!mounted) return;
@@ -38,15 +42,44 @@ export default function ChooseModePage() {
 
   return (
     <main className="min-h-screen flex flex-col bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
-      <div className="w-full max-w-lg mx-auto flex justify-end px-4 pt-4 shrink-0">
+      <div className="w-full max-w-lg mx-auto px-4 pt-4 flex flex-col gap-3 shrink-0">
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3 min-w-0 flex-1">
+            {girl.avatar_url ? (
+              <img
+                src={girl.avatar_url}
+                alt=""
+                className="w-16 h-16 sm:w-[4.5rem] sm:h-[4.5rem] rounded-full object-cover border-4 border-white shadow-md shrink-0"
+              />
+            ) : (
+              <div className="w-16 h-16 sm:w-[4.5rem] sm:h-[4.5rem] rounded-full bg-violet-200 border-4 border-white shadow-md flex items-center justify-center text-3xl shrink-0">
+                👤
+              </div>
+            )}
+            <div className="min-w-0 text-right">
+              <p className="font-bold text-gray-900 text-lg sm:text-xl leading-tight truncate">{girl.name}</p>
+              {!girl.avatar_url ? (
+                <p className="text-sm text-gray-500 mt-0.5 leading-snug">אפשר לבחור תמונת פרופיל למטה</p>
+              ) : null}
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="rounded-2xl border-2 border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 shrink-0"
+          >
+            יציאה
+          </button>
+        </div>
         <button
           type="button"
-          onClick={handleLogout}
-          className="rounded-2xl border-2 border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 shrink-0"
+          onClick={() => setAvatarPickerOpen(true)}
+          className="w-full rounded-2xl border-2 border-violet-200 bg-violet-50 py-3 text-base font-bold text-violet-800 hover:bg-violet-100 shadow-sm transition-colors"
         >
-          יציאה
+          החלפת אווטאר
         </button>
       </div>
+
       <section className="flex-1 flex flex-col items-center justify-center px-4 pb-10 w-full max-w-lg mx-auto gap-8">
         <header className="text-center space-y-2">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">בחרי מצב</h1>
@@ -81,6 +114,30 @@ export default function ChooseModePage() {
           </button>
         </div>
       </section>
+
+      {avatarPickerOpen ? (
+        <div
+          className="fixed inset-0 z-50 flex flex-col bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50 overflow-y-auto"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="choose-avatar-title"
+        >
+          <AvatarPicker
+            headingId="choose-avatar-title"
+            displayName={girl.name}
+            title="בחרי תמונה לפרופיל"
+            subtitle="בחרי תמונה חדשה או השאירי את הקודמת"
+            continueLabel="שמירה וחזרה"
+            initialSelectedUrl={girl.avatar_url}
+            onBack={() => setAvatarPickerOpen(false)}
+            backLabel="ביטול"
+            onConfirm={async (url) => {
+              await updateSessionAvatarUrl(url);
+              setAvatarPickerOpen(false);
+            }}
+          />
+        </div>
+      ) : null}
     </main>
   );
 }
