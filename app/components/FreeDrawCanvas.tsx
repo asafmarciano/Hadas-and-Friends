@@ -229,8 +229,9 @@ export const FreeDrawCanvas = forwardRef<FreeDrawCanvasHandle, Props>(function F
   return (
     <div
       ref={containerRef}
+      dir="ltr"
       className={
-        "relative w-full min-w-0 max-w-full max-sm:min-w-0 sm:max-w-3xl overflow-hidden touch-none box-border bg-white max-sm:flex-1 max-sm:min-h-0 max-sm:min-h-[55vh] max-sm:aspect-auto sm:aspect-[4/3] " +
+        "relative box-border h-full min-h-0 w-full min-w-0 max-w-full flex-1 touch-none self-stretch overflow-hidden bg-white max-sm:min-h-[55vh] max-sm:aspect-auto sm:aspect-[4/3] sm:min-h-0 " +
         (gameCardMobile
           ? "max-sm:rounded-lg max-sm:border max-sm:border-white/90 max-sm:shadow-inner sm:max-h-[62vh] sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl"
           : "max-sm:rounded-2xl max-sm:border-2 max-sm:border-white sm:max-h-[62vh] sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl")

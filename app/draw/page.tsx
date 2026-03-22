@@ -223,9 +223,9 @@ function DrawPageContent() {
         ) : null
       }
     >
-      <div className="flex w-full max-w-4xl flex-1 min-h-0 flex-col gap-0.5 overflow-hidden sm:gap-1">
-        <div className="flex flex-1 min-h-0 flex-col gap-1 overflow-hidden rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 p-1 shadow-md shadow-violet-200/30 ring-1 ring-white/80 max-sm:gap-2.5 max-sm:p-1.5 sm:gap-1.5">
-          <div className="relative min-h-0 flex-1 max-sm:min-h-[55vh] overflow-hidden rounded-xl bg-white/60 shadow-inner ring-2 ring-violet-100/90">
+      <div className="flex w-full min-w-0 max-w-4xl flex-1 min-h-0 flex-col gap-0.5 overflow-x-hidden overflow-y-hidden sm:gap-1">
+        <div className="flex min-w-0 flex-1 min-h-0 flex-col gap-1 overflow-x-hidden overflow-y-hidden rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 p-1 shadow-md shadow-violet-200/30 ring-1 ring-white/80 max-sm:gap-2.5 max-sm:p-1.5 sm:gap-1.5">
+          <div className="relative flex min-h-0 w-full min-w-0 flex-1 flex-col items-stretch overflow-hidden rounded-xl bg-white/60 shadow-inner ring-2 ring-violet-100/90 max-sm:min-h-[55vh]">
             <FreeDrawCanvas
               ref={canvasRef}
               brushColor={color}
