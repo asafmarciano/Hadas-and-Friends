@@ -78,7 +78,7 @@ export function DrawingToolbar({
         "sm:rounded-3xl sm:border-2 sm:border-white sm:bg-white/80 sm:shadow-lg sm:px-3 sm:py-3"
       }
     >
-      <div className="flex flex-col gap-1 sm:hidden w-full">
+      <div className="flex flex-col gap-1.5 sm:hidden w-full">
         <div className="rounded-lg border border-violet-100/70 bg-white/60 px-1 py-0.5 shadow-sm">
           <ColorPalette
             selectedColor={selectedColor}

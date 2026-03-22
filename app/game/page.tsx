@@ -463,10 +463,10 @@ export default function GamePage() {
         mainClassName={phase === "quiz" ? "pointer-events-none" : undefined}
         showGalleryLink={false}
       >
-        <div className="w-full max-w-4xl flex flex-col flex-1 min-h-0 gap-0.5 sm:gap-1">
-              <div className="rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 shadow-md shadow-violet-200/30 ring-1 ring-white/80 p-1 sm:p-2 flex flex-col flex-1 min-h-0 gap-1 sm:gap-1.5">
+        <div className="w-full max-w-4xl flex flex-col flex-1 min-h-0 gap-0.5 overflow-hidden sm:gap-1">
+              <div className="rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 shadow-md shadow-violet-200/30 ring-1 ring-white/80 p-1 max-sm:p-1.5 flex flex-col flex-1 min-h-0 gap-1 max-sm:gap-2.5 sm:gap-1.5 overflow-hidden">
                 {/* Full-area drawable canvas; line art centered underneath */}
-                <div className="relative flex-1 min-h-0 max-sm:min-h-[40vh] rounded-xl overflow-hidden ring-2 ring-violet-100/90 shadow-inner bg-white/60 sm:min-h-0">
+                <div className="relative flex-1 min-h-0 max-sm:min-h-[55vh] rounded-xl overflow-hidden ring-2 ring-violet-100/90 shadow-inner bg-white/60">
                   <div ref={wrapRef} className="absolute inset-0 w-full h-full min-h-0">
                     <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none p-0.5 bg-neutral-100">
                       {!coloringListReady ? (

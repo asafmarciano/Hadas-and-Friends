@@ -230,12 +230,12 @@ export const FreeDrawCanvas = forwardRef<FreeDrawCanvasHandle, Props>(function F
     <div
       ref={containerRef}
       className={
-        "relative w-full min-w-0 max-w-full max-sm:min-w-0 sm:max-w-3xl overflow-hidden touch-none box-border bg-white " +
+        "relative w-full min-w-0 max-w-full max-sm:min-w-0 sm:max-w-3xl overflow-hidden touch-none box-border bg-white max-sm:flex-1 max-sm:min-h-0 max-sm:min-h-[55vh] max-sm:aspect-auto sm:aspect-[4/3] " +
         (gameCardMobile
-          ? "max-sm:max-h-[min(72vh,85vw)] max-sm:rounded-lg max-sm:border max-sm:border-white/90 max-sm:shadow-inner sm:max-h-[62vh] sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl"
-          : "max-sm:max-h-[76vh] max-sm:rounded-2xl max-sm:border-2 max-sm:border-white sm:max-h-[62vh] sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl")
+          ? "max-sm:rounded-lg max-sm:border max-sm:border-white/90 max-sm:shadow-inner sm:max-h-[62vh] sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl"
+          : "max-sm:rounded-2xl max-sm:border-2 max-sm:border-white sm:max-h-[62vh] sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl")
       }
-      style={{ aspectRatio: "4/3", touchAction: "none" }}
+      style={{ touchAction: "none" }}
     >
       <canvas
         ref={canvasRef}
