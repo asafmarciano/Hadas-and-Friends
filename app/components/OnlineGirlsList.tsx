@@ -94,8 +94,8 @@ export function OnlineGirlsList({
     loading
       ? "טוען..."
       : count === 0
-        ? "אין חברות מחוברות כרגע"
-        : `חברות מחוברות (${count})`;
+        ? "אין חברים מחוברים כרגע"
+        : `חברים מחוברים (${count})`;
 
   const panel =
     open && typeof document !== "undefined" && position
@@ -103,7 +103,7 @@ export function OnlineGirlsList({
           <div
             id="online-girls-popover"
             role="dialog"
-            aria-label="חברות מחוברות"
+            aria-label="חברים מחוברים"
             className="fixed min-w-[320px] max-w-[95vw] rounded-3xl border-2 border-violet-200 bg-white shadow-xl overflow-hidden"
             dir="rtl"
             style={{
@@ -115,13 +115,13 @@ export function OnlineGirlsList({
             }}
           >
             <div className="px-5 py-3.5 border-b border-violet-100 bg-gradient-to-b from-violet-50/95 to-pink-50/80">
-              <span className="text-base font-bold text-gray-800">חברות מחוברות</span>
+              <span className="text-base font-bold text-gray-800">חברים מחוברים</span>
             </div>
             <div className="max-h-80 overflow-y-auto bg-white p-3">
               {loading ? (
                 <p className="px-4 py-6 text-gray-500 text-sm text-center">טוען...</p>
               ) : count === 0 ? (
-                <p className="px-4 py-6 text-gray-500 text-sm text-center">אין חברות מחוברות כרגע</p>
+                <p className="px-4 py-6 text-gray-500 text-sm text-center">אין חברים מחוברים כרגע</p>
               ) : (
                 <ul className="space-y-3">
                   {users.map((u) => (

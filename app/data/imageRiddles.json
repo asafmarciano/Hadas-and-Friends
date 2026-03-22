@@ -348,7 +348,7 @@
     "id": 24,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🦁",
     "imageLabel": "אריה",
     "options": [
@@ -393,7 +393,7 @@
     "id": 27,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🦁",
     "imageLabel": "אריה",
     "options": [
@@ -408,7 +408,7 @@
     "id": 28,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🦁",
     "imageLabel": "אריה",
     "options": [
@@ -558,7 +558,7 @@
     "id": 38,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🐟",
     "imageLabel": "דג",
     "options": [
@@ -573,7 +573,7 @@
     "id": 39,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🐟",
     "imageLabel": "דג",
     "options": [
@@ -723,7 +723,7 @@
     "id": 49,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🐴",
     "imageLabel": "סוס",
     "options": [
@@ -843,7 +843,7 @@
     "id": 57,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🐦",
     "imageLabel": "ציפור",
     "options": [
@@ -1008,7 +1008,7 @@
     "id": 68,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍎",
     "imageLabel": "תפוח",
     "options": [
@@ -1023,7 +1023,7 @@
     "id": 69,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍎",
     "imageLabel": "תפוח",
     "options": [
@@ -1038,7 +1038,7 @@
     "id": 70,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍎",
     "imageLabel": "תפוח",
     "options": [
@@ -1053,7 +1053,7 @@
     "id": 71,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍎",
     "imageLabel": "תפוח",
     "options": [
@@ -1218,7 +1218,7 @@
     "id": 82,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍌",
     "imageLabel": "בננה",
     "options": [
@@ -1233,7 +1233,7 @@
     "id": 83,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍌",
     "imageLabel": "בננה",
     "options": [
@@ -1323,7 +1323,7 @@
     "id": 89,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍞",
     "imageLabel": "לחם",
     "options": [
@@ -1533,7 +1533,7 @@
     "id": 103,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🎂",
     "imageLabel": "עוגה",
     "options": [
@@ -1698,7 +1698,7 @@
     "id": 114,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🥛",
     "imageLabel": "חלב",
     "options": [
@@ -1818,7 +1818,7 @@
     "id": 122,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍫",
     "imageLabel": "שוקולד",
     "options": [
@@ -1878,7 +1878,7 @@
     "id": 126,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍫",
     "imageLabel": "שוקולד",
     "options": [
@@ -2058,7 +2058,7 @@
     "id": 138,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "📘",
     "imageLabel": "ספר",
     "options": [
@@ -2313,7 +2313,7 @@
     "id": 155,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🖊️",
     "imageLabel": "עט",
     "options": [
@@ -2328,7 +2328,7 @@
     "id": 156,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🖊️",
     "imageLabel": "עט",
     "options": [
@@ -2388,7 +2388,7 @@
     "id": 160,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🖊️",
     "imageLabel": "עט",
     "options": [
@@ -2673,7 +2673,7 @@
     "id": 179,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🪑",
     "imageLabel": "כיסא",
     "options": [
@@ -2883,7 +2883,7 @@
     "id": 193,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🪵",
     "imageLabel": "שולחן",
     "options": [
@@ -3093,7 +3093,7 @@
     "id": 207,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🍫",
     "imageLabel": "שוקולד",
     "options": [
@@ -3138,7 +3138,7 @@
     "id": 210,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "📘",
     "imageLabel": "ספר",
     "options": [
@@ -3153,7 +3153,7 @@
     "id": 211,
     "level": "easy",
     "type": "image_match",
-    "prompt": "בחרי את המילה הנכונה",
+    "prompt": "בחרו את המילה הנכונה",
     "image": "🐴",
     "imageLabel": "סוס",
     "options": [

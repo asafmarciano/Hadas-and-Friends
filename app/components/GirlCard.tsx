@@ -32,7 +32,7 @@ export function GirlCard({ displayName, avatar, colorClass, onSelect, isOnline, 
         {displayName}
       </span>
       {isOnline && (
-        <span className="relative z-10 mt-1 text-xs font-medium text-gray-600">מחוברת עכשיו</span>
+        <span className="relative z-10 mt-1 text-xs font-medium text-gray-600">כאן עכשיו</span>
       )}
     </button>
   );

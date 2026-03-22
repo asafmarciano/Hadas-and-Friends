@@ -82,7 +82,7 @@ export default function ChooseModePage() {
 
       <section className="flex-1 flex flex-col items-center justify-center px-3 sm:px-4 pb-6 sm:pb-10 w-full max-w-md sm:max-w-lg mx-auto gap-4 sm:gap-8">
         <header className="text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">מה בא לך לעשות?</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">מה בא לכם לעשות?</h1>
         </header>
         <div className="flex flex-col gap-3 sm:gap-5 w-full">
           <button
@@ -124,8 +124,8 @@ export default function ChooseModePage() {
           <AvatarPicker
             headingId="choose-avatar-title"
             displayName={girl.name}
-            title="בחרי תמונה לפרופיל"
-            subtitle="בחרי תמונה חדשה או השאירי את הקודמת"
+            title="בחרו תמונה לפרופיל"
+            subtitle="בחרו תמונה חדשה או השאירו את הקודמת"
             continueLabel="שמירה וחזרה"
             initialSelectedUrl={girl.avatar_url}
             onBack={() => setAvatarPickerOpen(false)}

@@ -575,7 +575,7 @@ export default function GamePage() {
                       onClick={handleFinishDrawing}
                       className="w-full rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 py-1.5 text-sm font-bold text-white shadow-md ring-1 ring-white/40 hover:from-emerald-600 hover:to-teal-600 shrink-0 sm:rounded-xl sm:py-2 sm:text-base"
                     >
-                      סיימתי! ✨
+                      סיימתם! ✨
                     </button>
                   </>
                 )}
@@ -618,7 +618,7 @@ export default function GamePage() {
               ))}
             </div>
             {quizWrong && !quizCorrect && (
-              <p className="text-base font-semibold text-red-600">לא נכון, נסי שוב</p>
+              <p className="text-base font-semibold text-red-600">לא נכון, נסו שוב</p>
             )}
             {quizCorrect && (
               <button

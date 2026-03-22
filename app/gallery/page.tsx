@@ -92,7 +92,7 @@ export default function GalleryPage() {
       setMessage("הציור נמחק");
       window.setTimeout(() => setMessage(null), 2000);
     } catch {
-      setMessage("מחיקה נכשלה, נסי שוב");
+      setMessage("מחיקה נכשלה, נסו שוב");
       window.setTimeout(() => setMessage(null), 2000);
     }
   };
@@ -125,7 +125,7 @@ export default function GalleryPage() {
           </div>
         ) : drawings.length === 0 ? (
           <div className="flex items-center justify-center h-40">
-            <p className="text-gray-600 text-base">עדיין אין לך ציורים שמורים.</p>
+            <p className="text-gray-600 text-base">עדיין אין כאן ציורים שמורים.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -171,7 +171,7 @@ export default function GalleryPage() {
                       onClick={() => handleDelete(d)}
                       className="rounded-2xl border-2 border-red-200 bg-red-50 px-3 py-1 text-xs font-semibold text-red-700 hover:bg-red-100"
                     >
-                      מחקי
+                      מחקו
                     </button>
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -181,7 +181,7 @@ export default function GalleryPage() {
                       rel="noopener noreferrer"
                       className="rounded-2xl border-2 border-violet-200 bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700 hover:bg-violet-100"
                     >
-                      הדפסי
+                      הדפסו
                     </Link>
                     <Link
                       href={`/draw?edit=${d.id}`}
@@ -194,7 +194,7 @@ export default function GalleryPage() {
                       className="rounded-2xl border-2 border-violet-200 bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700 hover:bg-violet-100"
                       onClick={(e) => !signedUrl && e.preventDefault()}
                     >
-                      שלחי במייל
+                      שלחו במייל
                     </a>
                   </div>
                 </div>

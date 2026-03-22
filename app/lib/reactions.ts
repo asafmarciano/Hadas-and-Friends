@@ -19,7 +19,7 @@ export function getReactionEmoji(type: ReactionType): string {
 export function getReactionMessage(senderName: string, type: ReactionType): string {
   const e = EMOJI[type];
   const label = type === "heart" ? "לב" : type === "star" ? "כוכב" : type === "rainbow" ? "קשת" : "חד־קרן";
-  return `${senderName} שלחה לך ${label} ${e}`;
+  return `קיבלת ${label} ${e} מ־${senderName}!`;
 }
 
 export interface ReactionPayload {
@@ -40,7 +40,7 @@ export async function sendReaction(fromUserId: string, toUserId: string, type: R
 
 export async function getSenderName(userId: string): Promise<string> {
   const { data } = await supabase.from("approved_users").select("display_name").eq("id", userId).single();
-  return (data as { display_name?: string } | null)?.display_name ?? "מישהי";
+  return (data as { display_name?: string } | null)?.display_name ?? "מישהו";
 }
 
 export function subscribeReactions(toUserId: string, onReaction: (p: ReactionPayload) => void) {

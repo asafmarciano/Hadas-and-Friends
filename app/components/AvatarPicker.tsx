@@ -28,7 +28,7 @@ export type AvatarPickerProps = {
 
 export function AvatarPicker({
   displayName,
-  title = "בחרי תמונה לפרופיל",
+  title = "בחרו תמונה לפרופיל",
   subtitle,
   continueLabel,
   urlsOverride,

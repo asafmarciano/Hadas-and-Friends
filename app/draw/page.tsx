@@ -186,7 +186,7 @@ function DrawPageContent() {
       setSaveMessage("הציור נשמר");
     } catch (e) {
       console.error("save drawing failed", e);
-      setSaveMessage("שמירה נכשלה, נסי שוב");
+      setSaveMessage("שמירה נכשלה, נסו שוב");
     } finally {
       setSaving(false);
       window.setTimeout(() => setSaveMessage(null), 2000);

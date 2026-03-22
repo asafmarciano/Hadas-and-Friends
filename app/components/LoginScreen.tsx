@@ -81,7 +81,7 @@ export function LoginScreen() {
         const data = await fetchApprovedGirls();
         if (!cancelled) setGirls(data);
       } catch (e) {
-        if (!cancelled) setError("משהו השתבש, נסי שוב");
+        if (!cancelled) setError("משהו השתבש, נסו שוב");
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -121,7 +121,7 @@ export function LoginScreen() {
   const handlePinSubmit = async (pin: string) => {
     if (!selectedGirl) return;
     if (!validatePin(selectedGirl, pin)) {
-      setPinError("קוד שגוי, נסי שוב");
+      setPinError("קוד שגוי, נסו שוב");
       return;
     }
     setPinBusy(true);
@@ -229,7 +229,7 @@ export function LoginScreen() {
         <AvatarPicker
           displayName={avatarStepName}
           subtitle="אחרי הקוד — עכשיו בוחרים איך נראה הפרופיל"
-          continueLabel="מה בא לך לעשות?"
+          continueLabel="מה בא לכם לעשות?"
           urlsOverride={avatarUrlsOverride}
           initialSelectedUrl={null}
           onBack={handleBackFromAvatars}
@@ -245,9 +245,9 @@ export function LoginScreen() {
       <section className="w-full max-w-4xl flex flex-col items-center gap-4 sm:gap-8">
         <header className="text-center space-y-1 sm:space-y-2">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
-            הדס והחברות
+            הדס וחברים
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-700">בחרי את השם שלך</p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-700">בחרו את השם שלכם</p>
           <p className="text-xs sm:text-sm text-gray-500">אחר כך יבקשו את הקוד, ואז תמונת פרופיל</p>
         </header>
 
@@ -265,7 +265,7 @@ export function LoginScreen() {
           ))}
         </div>
         {girls.length === 0 && (
-          <p className="text-gray-600">אין משתמשות מאושרות כרגע.</p>
+          <p className="text-gray-600">אין משתמשים מאושרים כרגע.</p>
         )}
       </section>
     </main>

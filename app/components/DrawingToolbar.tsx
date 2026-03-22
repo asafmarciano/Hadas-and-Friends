@@ -54,7 +54,7 @@ export function DrawingToolbar({
         onClick={onSave}
         className="min-w-[40px] h-9 px-3 text-sm sm:min-w-[44px] sm:h-11 sm:px-4 sm:text-base rounded-xl border-2 border-emerald-200 bg-emerald-50 font-semibold text-emerald-700 hover:bg-emerald-100 sm:rounded-2xl"
       >
-        💾 שמרי לגלריה
+        💾 שמרו לגלריה
       </button>
     </div>
   );
@@ -114,7 +114,7 @@ export function DrawingToolbar({
           onClick={onSave}
           className="w-full rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 py-1.5 text-sm font-bold text-white shadow-md ring-1 ring-white/40 hover:from-emerald-600 hover:to-teal-600 sm:rounded-xl sm:py-2 sm:text-base"
         >
-          💾 שמרי לגלריה
+          💾 שמרו לגלריה
         </button>
       </div>
 

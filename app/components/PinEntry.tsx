@@ -23,7 +23,7 @@ export function PinEntry({ girlName, onSubmit, onBack, error, busy = false }: Pi
     <div className="w-full max-w-md px-3 sm:px-4" dir="rtl">
       <div className="rounded-2xl sm:rounded-3xl border-2 border-violet-200 bg-white/90 shadow-lg sm:shadow-xl p-5 sm:p-8">
         <div className="flex justify-between items-center mb-4 sm:mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">הכניסי קוד</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">הזינו קוד</h2>
           <button
             type="button"
             onClick={onBack}
@@ -33,7 +33,7 @@ export function PinEntry({ girlName, onSubmit, onBack, error, busy = false }: Pi
           </button>
         </div>
         <p className="mb-4 sm:mb-6 flex items-center justify-center gap-2 rounded-xl sm:rounded-2xl bg-violet-50/80 py-2.5 sm:py-3 px-3 sm:px-4 text-center">
-          <span className="text-gray-600 text-xs sm:text-sm font-medium">בחרת ב־</span>
+          <span className="text-gray-600 text-xs sm:text-sm font-medium">בחרתם את </span>
           <span className="text-violet-700 font-bold text-base sm:text-lg">{girlName}</span>
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-4">

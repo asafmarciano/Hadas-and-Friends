@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "הדס והחברות",
-  description: "אפליקציית ציור פרטית לילדות",
+  title: "הדס וחברים",
+  description: "אפליקציית ציור פרטית לילדים",
 };
 
 export default function RootLayout({
