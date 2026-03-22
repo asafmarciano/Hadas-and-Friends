@@ -210,7 +210,7 @@ export function LoginScreen() {
 
   if (selectedGirl && step === "pin") {
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50 px-4 py-10" dir="rtl">
+      <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50 px-3 sm:px-4 py-6 sm:py-10" dir="rtl">
         <PinEntry
           girlName={selectedGirl.display_name}
           onSubmit={handlePinSubmit}
@@ -241,17 +241,17 @@ export function LoginScreen() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50 px-4 py-10" dir="rtl">
-      <section className="w-full max-w-4xl flex flex-col items-center gap-8">
-        <header className="text-center space-y-2">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50 px-3 sm:px-4 py-6 sm:py-10" dir="rtl">
+      <section className="w-full max-w-4xl flex flex-col items-center gap-4 sm:gap-8">
+        <header className="text-center space-y-1 sm:space-y-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
             הדס והחברות
           </h1>
-          <p className="text-lg sm:text-xl text-gray-700">בחרי את השם שלך</p>
-          <p className="text-sm text-gray-500">אחר כך יבקשו את הקוד, ואז תמונת פרופיל</p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-700">בחרי את השם שלך</p>
+          <p className="text-xs sm:text-sm text-gray-500">אחר כך יבקשו את הקוד, ואז תמונת פרופיל</p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 w-full">
           {girls.map((girl, i) => (
             <GirlCard
               key={girl.id}

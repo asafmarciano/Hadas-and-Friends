@@ -20,11 +20,8 @@ type DrawingSessionShellProps = {
   onReactionExpired: (id: string) => void;
   onSendReaction: (toUserId: string, type: ReactionType) => void;
   onLogout: () => void | Promise<void>;
-  /** Same slot as save toast on /draw — optional extra content in the fixed banner stack */
   bannerExtra?: ReactNode;
-  /** Merged after the same base `main` classes as `app/draw/page.tsx` (e.g. quiz `pointer-events-none`) */
   mainClassName?: string;
-  /** When false, hides the gallery link (e.g. /game). Defaults to true for Free Draw. */
   showGalleryLink?: boolean;
   children: ReactNode;
 };
@@ -45,11 +42,15 @@ export function DrawingSessionShell({
   children,
 }: DrawingSessionShellProps) {
   const router = useRouter();
-  const mainBase = "flex-1 flex flex-col items-center gap-4 px-3 py-4 pb-6";
+  const mainBase =
+    "flex-1 flex flex-col gap-2 py-2 pb-3 max-sm:min-w-0 max-sm:px-2 sm:gap-4 sm:py-4 sm:pb-6 sm:px-3 sm:items-center";
   const mainClasses = mainClassName ? `${mainBase} ${mainClassName}` : mainBase;
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
+    <div
+      className="min-h-screen flex flex-col w-full min-w-0 max-sm:overflow-x-hidden bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50"
+      dir="rtl"
+    >
       <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 pointer-events-none max-w-[90vw]">
         {notifications.map((n) => (
           <ReactionBanner key={n.id} message={n.message} />
@@ -57,8 +58,8 @@ export function DrawingSessionShell({
         {bannerExtra}
       </div>
       <ReactionEffectsLayer reactions={reactionInstances} onExpired={onReactionExpired} />
-      <header className="flex flex-wrap items-center justify-between gap-3 px-3 py-3 border-b border-white/60 bg-white/60 backdrop-blur-sm">
-        <div className="flex items-center gap-3">
+      <header className="flex flex-wrap items-center justify-between gap-2 min-w-0 max-sm:px-2 sm:gap-3 sm:px-3 py-2 sm:py-3 border-b border-white/60 bg-white/60 backdrop-blur-sm">
+        <div className="flex items-center gap-2 min-w-0 sm:gap-3">
           {girl.avatar_url ? (
             <img
               src={girl.avatar_url}
@@ -68,22 +69,22 @@ export function DrawingSessionShell({
                 const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
                 if (fallback) fallback.style.display = "flex";
               }}
-              className="w-10 h-10 rounded-full object-cover border-2 border-white"
+              className="h-9 w-9 shrink-0 rounded-full border-2 border-white object-cover sm:h-10 sm:w-10"
             />
           ) : null}
           <div
-            className="w-10 h-10 rounded-full bg-violet-200 flex items-center justify-center text-lg"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-white bg-violet-200 text-base shadow-md sm:h-10 sm:w-10 sm:text-lg"
             style={{ display: girl.avatar_url ? "none" : "flex" }}
           >
             👤
           </div>
-          <span className="font-bold text-gray-800">{girl.name}</span>
+          <span className="min-w-0 truncate text-sm font-bold text-gray-800 sm:text-base">{girl.name}</span>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2 min-w-0 sm:gap-3">
           <button
             type="button"
             onClick={() => router.push("/choose")}
-            className="rounded-2xl border-2 border-pink-300 bg-pink-100 px-4 py-2.5 text-base font-bold text-pink-900 hover:bg-pink-200 hover:border-pink-400 shrink-0 shadow-sm"
+            className="rounded-xl border-2 border-pink-300 bg-pink-100 px-3 py-1.5 text-sm font-bold text-pink-900 shadow-sm hover:bg-pink-200 hover:border-pink-400 sm:rounded-2xl sm:px-4 sm:py-2.5 sm:text-base"
           >
             🔙 לבחור משהו אחר
           </button>
@@ -91,7 +92,7 @@ export function DrawingSessionShell({
           {showGalleryLink ? (
             <a
               href="/gallery"
-              className="rounded-2xl border-2 border-violet-200 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-700 hover:bg-violet-100 shrink-0"
+              className="rounded-xl border-2 border-violet-200 bg-violet-50 px-3 py-1.5 text-xs font-semibold text-violet-700 hover:bg-violet-100 sm:rounded-2xl sm:px-4 sm:py-2 sm:text-sm"
             >
               הציורים שלי
             </a>
@@ -99,7 +100,7 @@ export function DrawingSessionShell({
           <button
             type="button"
             onClick={onLogout}
-            className="rounded-2xl border-2 border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 shrink-0"
+            className="rounded-xl border-2 border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 sm:rounded-2xl sm:px-4 sm:py-2 sm:text-sm"
           >
             יציאה
           </button>

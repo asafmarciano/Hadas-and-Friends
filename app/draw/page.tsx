@@ -223,24 +223,35 @@ function DrawPageContent() {
         ) : null
       }
     >
-      <FreeDrawCanvas
-        ref={canvasRef}
-        brushColor={color}
-        brushSize={brushSize}
-        isEraser={isEraser}
-        initialDataUrl={initialDrawingUrl}
-        onStrokeEnd={handleStrokeEnd}
-      />
-      <DrawingToolbar
-        selectedColor={color}
-        onSelectColor={(c) => { setColor(c); if (isEraser) setIsEraser(false); }}
-        brushSize={brushSize}
-        onBrushSizeChange={setBrushSize}
-        isEraser={isEraser}
-        onEraserToggle={() => setIsEraser((v) => !v)}
-        onClear={handleClear}
-        onSave={handleSaveDrawing}
-      />
+      <div className="w-full max-w-4xl flex flex-col flex-1 min-h-0 gap-0.5 max-sm:mx-auto sm:contents sm:max-w-none">
+        <div className="flex flex-col flex-1 min-h-0 gap-1 max-sm:rounded-[1.15rem] max-sm:border-2 max-sm:border-violet-200/90 max-sm:bg-gradient-to-b max-sm:from-white max-sm:via-fuchsia-50/30 max-sm:to-violet-50/40 max-sm:shadow-md max-sm:shadow-violet-200/30 max-sm:ring-1 max-sm:ring-white/80 max-sm:p-1 sm:contents sm:gap-4 sm:max-w-none">
+          <div className="relative flex w-full min-w-0 justify-center max-sm:flex-1 max-sm:min-h-0 max-sm:min-h-[40vh] max-sm:rounded-xl max-sm:overflow-hidden max-sm:ring-2 max-sm:ring-violet-100/90 max-sm:shadow-inner max-sm:bg-white/60 sm:contents sm:min-h-0 sm:rounded-none sm:overflow-visible sm:ring-0 sm:bg-transparent sm:shadow-none">
+            <FreeDrawCanvas
+              ref={canvasRef}
+              brushColor={color}
+              brushSize={brushSize}
+              isEraser={isEraser}
+              initialDataUrl={initialDrawingUrl}
+              onStrokeEnd={handleStrokeEnd}
+              gameCardMobile
+            />
+          </div>
+          <DrawingToolbar
+            selectedColor={color}
+            onSelectColor={(c) => {
+              setColor(c);
+              if (isEraser) setIsEraser(false);
+            }}
+            brushSize={brushSize}
+            onBrushSizeChange={setBrushSize}
+            isEraser={isEraser}
+            onEraserToggle={() => setIsEraser((v) => !v)}
+            onClear={handleClear}
+            onSave={handleSaveDrawing}
+            gameMobileLayout
+          />
+        </div>
+      </div>
     </DrawingSessionShell>
   );
 }

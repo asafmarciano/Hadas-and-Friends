@@ -463,10 +463,10 @@ export default function GamePage() {
         mainClassName={phase === "quiz" ? "pointer-events-none" : undefined}
         showGalleryLink={false}
       >
-        <div className="w-full max-w-4xl flex flex-col flex-1 min-h-0 gap-1">
-              <div className="rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 shadow-md shadow-violet-200/30 ring-1 ring-white/80 p-1.5 sm:p-2 flex flex-col flex-1 min-h-0 gap-1.5">
+        <div className="w-full max-w-4xl flex flex-col flex-1 min-h-0 gap-0.5 sm:gap-1">
+              <div className="rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 shadow-md shadow-violet-200/30 ring-1 ring-white/80 p-1 sm:p-2 flex flex-col flex-1 min-h-0 gap-1 sm:gap-1.5">
                 {/* Full-area drawable canvas; line art centered underneath */}
-                <div className="relative flex-1 min-h-0 rounded-xl overflow-hidden ring-2 ring-violet-100/90 shadow-inner bg-white/60">
+                <div className="relative flex-1 min-h-0 max-sm:min-h-[40vh] rounded-xl overflow-hidden ring-2 ring-violet-100/90 shadow-inner bg-white/60 sm:min-h-0">
                   <div ref={wrapRef} className="absolute inset-0 w-full h-full min-h-0">
                     <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none p-0.5 bg-neutral-100">
                       {!coloringListReady ? (
@@ -500,8 +500,8 @@ export default function GamePage() {
 
                 {phase === "paint" && (
                   <>
-                    <div className="rounded-xl border border-violet-100/70 bg-white/60 px-1.5 py-1 shadow-sm shrink-0">
-                      <div className="grid grid-cols-5 gap-1 justify-items-center w-full max-w-md mx-auto">
+                    <div className="rounded-lg border border-violet-100/70 bg-white/60 px-1 py-0.5 shadow-sm shrink-0 sm:rounded-xl sm:px-1.5 sm:py-1">
+                      <div className="mx-auto grid w-full max-w-md grid-cols-5 justify-items-center gap-0.5 sm:gap-1">
                         {PALETTE.map((hex) => (
                           <button
                             key={hex}
@@ -510,7 +510,7 @@ export default function GamePage() {
                               setSelectedColor(hex);
                               setIsEraser(false);
                             }}
-                            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 shadow-sm transition-transform active:scale-95 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-violet-300/70 touch-manipulation"
+                            className="h-7 w-7 rounded-full border-2 shadow-sm transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-violet-300/70 active:scale-95 touch-manipulation sm:h-9 sm:w-9"
                             style={{
                               backgroundColor: hex,
                               borderColor: !isEraser && selectedColor === hex ? "#5b21b6" : "rgba(255,255,255,0.95)",
@@ -523,15 +523,15 @@ export default function GamePage() {
                       </div>
                     </div>
 
-                    <div className="rounded-xl border border-sky-100/80 bg-gradient-to-r from-sky-50/70 to-violet-50/50 px-1.5 py-1 shadow-sm shrink-0">
-                      <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5">
+                    <div className="rounded-lg border border-sky-100/80 bg-gradient-to-r from-sky-50/70 to-violet-50/50 px-1 py-0.5 shadow-sm shrink-0 sm:rounded-xl sm:px-1.5 sm:py-1">
+                      <div className="flex flex-wrap items-center justify-center gap-0.5 sm:gap-1.5">
                         {BRUSH_SIZES.map(({ id, label, size }) => (
                           <button
                             key={id}
                             type="button"
                             onClick={() => setBrushSize(size)}
                             className={
-                              "min-h-[36px] px-2 py-1 rounded-lg border text-xs font-bold transition-colors touch-manipulation " +
+                              "min-h-[32px] px-1.5 py-0.5 text-[0.65rem] sm:min-h-[36px] sm:px-2 sm:py-1 sm:text-xs rounded-md border font-bold transition-colors touch-manipulation sm:rounded-lg " +
                               (brushSize === size
                                 ? "bg-violet-200 border-violet-500 text-violet-950"
                                 : "bg-white border-violet-200 text-violet-800 hover:bg-violet-50")
@@ -544,7 +544,7 @@ export default function GamePage() {
                           type="button"
                           onClick={() => setIsEraser((v) => !v)}
                           className={
-                            "min-h-[36px] px-2 py-1 rounded-lg border text-xs font-bold touch-manipulation " +
+                            "min-h-[32px] px-1.5 py-0.5 text-[0.65rem] sm:min-h-[36px] sm:px-2 sm:py-1 sm:text-xs rounded-md border font-bold touch-manipulation sm:rounded-lg " +
                             (isEraser
                               ? "bg-amber-200 border-amber-500 text-amber-950"
                               : "bg-white border-amber-200 text-amber-900 hover:bg-amber-50")
@@ -556,14 +556,14 @@ export default function GamePage() {
                           type="button"
                           onClick={handleUndo}
                           disabled={!canUndo}
-                          className="min-h-[36px] px-2 py-1 rounded-lg border border-sky-200 bg-white text-xs font-bold text-sky-900 hover:bg-sky-50 disabled:opacity-40 disabled:pointer-events-none touch-manipulation"
+                          className="min-h-[32px] px-1.5 py-0.5 text-[0.65rem] sm:min-h-[36px] sm:px-2 sm:py-1 sm:text-xs rounded-md border border-sky-200 bg-white font-bold text-sky-900 hover:bg-sky-50 disabled:pointer-events-none disabled:opacity-40 touch-manipulation sm:rounded-lg"
                         >
                           ↩️ ביטול
                         </button>
                         <button
                           type="button"
                           onClick={handleClear}
-                          className="min-h-[36px] px-2 py-1 rounded-lg border border-red-200 bg-red-50 text-xs font-bold text-red-800 hover:bg-red-100 touch-manipulation"
+                          className="min-h-[32px] px-1.5 py-0.5 text-[0.65rem] sm:min-h-[36px] sm:px-2 sm:py-1 sm:text-xs rounded-md border border-red-200 bg-red-50 font-bold text-red-800 hover:bg-red-100 touch-manipulation sm:rounded-lg"
                         >
                           🗑️ נקה
                         </button>
@@ -573,7 +573,7 @@ export default function GamePage() {
                     <button
                       type="button"
                       onClick={handleFinishDrawing}
-                      className="w-full rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 py-2 text-base font-bold text-white shadow-md hover:from-emerald-600 hover:to-teal-600 shrink-0 ring-1 ring-white/40"
+                      className="w-full rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 py-1.5 text-sm font-bold text-white shadow-md ring-1 ring-white/40 hover:from-emerald-600 hover:to-teal-600 shrink-0 sm:rounded-xl sm:py-2 sm:text-base"
                     >
                       סיימתי! ✨
                     </button>

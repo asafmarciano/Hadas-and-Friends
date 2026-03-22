@@ -13,6 +13,8 @@ interface OnlineGirlsListProps {
   currentUserId: string;
   pollIntervalMs?: number;
   onSendReaction?: (toUserId: string, type: ReactionType) => void;
+  /** Wider trigger on mobile (e.g. /draw header grid) */
+  fullWidthTrigger?: boolean;
 }
 
 function updatePanelPosition(triggerEl: HTMLElement | null) {
@@ -33,6 +35,7 @@ export function OnlineGirlsList({
   currentUserId,
   pollIntervalMs = POLL_INTERVAL_MS,
   onSendReaction,
+  fullWidthTrigger = false,
 }: OnlineGirlsListProps) {
   const [users, setUsers] = useState<OnlineUser[]>([]);
   const [loading, setLoading] = useState(true);
@@ -177,7 +180,10 @@ export function OnlineGirlsList({
         ref={triggerRef}
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="rounded-2xl border-2 border-white bg-white/80 px-4 py-2 text-sm font-bold text-gray-800 hover:bg-violet-50 hover:border-violet-200 transition-colors shadow-sm shrink-0"
+        className={
+          "rounded-xl border-2 border-white bg-white/80 px-2.5 py-1.5 text-xs font-bold text-gray-800 hover:bg-violet-50 hover:border-violet-200 transition-colors shadow-sm min-w-0 max-w-full max-sm:truncate sm:rounded-2xl sm:px-4 sm:py-2 sm:text-sm sm:shrink-0 " +
+          (fullWidthTrigger ? "max-sm:w-full max-sm:justify-center max-sm:text-center " : "")
+        }
         aria-expanded={open}
       >
         {triggerLabel}

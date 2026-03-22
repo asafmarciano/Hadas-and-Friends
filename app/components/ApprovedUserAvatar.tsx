@@ -20,7 +20,7 @@ const FALLBACK_EMOJIS = [
   "🍀",
 ] as const;
 
-const SIZE_CLASS = "w-20 h-20 sm:w-24 sm:h-24";
+const SIZE_CLASS = "w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24";
 
 function getFallbackEmoji(displayName: string, emojiIndex?: number): string {
   if (typeof emojiIndex === "number") {
@@ -89,7 +89,7 @@ export function ApprovedUserAvatar({ avatar, displayName, emojiIndex }: Approved
       className={`relative z-10 ${SIZE_CLASS} rounded-full border-2 border-white shadow-md bg-gradient-to-br from-violet-100 via-pink-50 to-sky-100 flex items-center justify-center shrink-0`}
       aria-hidden
     >
-      <span className="text-4xl sm:text-5xl leading-none drop-shadow-sm select-none">{fallbackEmoji}</span>
+      <span className="text-3xl sm:text-4xl md:text-5xl leading-none drop-shadow-sm select-none">{fallbackEmoji}</span>
     </div>
   );
 }
