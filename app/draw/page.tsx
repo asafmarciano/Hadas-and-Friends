@@ -19,9 +19,9 @@ import { DrawingToolbar } from "../components/DrawingToolbar";
 import { DrawingSessionShell } from "../components/DrawingSessionShell";
 import { type ReactionInstance } from "../components/ReactionEffectsLayer";
 import { BRUSH_SIZES } from "../components/BrushSizePicker";
+import { GAME_DRAW_PALETTE } from "@/app/lib/gameDrawPalette";
 
-
-const DEFAULT_COLOR = "#f9a8d4";
+const DEFAULT_COLOR = GAME_DRAW_PALETTE[7];
 
 const DRAWINGS_BUCKET = "drawings";
 const SIGNED_URL_EXPIRY_SEC = 60 * 60;
@@ -32,7 +32,7 @@ function DrawPageContent() {
   const canvasRef = useRef<FreeDrawCanvasHandle | null>(null);
   const sessionRef = useRef<{ id: string; name: string; avatar_url: string | null } | null>(null);
   const [mounted, setMounted] = useState(false);
-  const [color, setColor] = useState(DEFAULT_COLOR);
+  const [color, setColor] = useState<string>(DEFAULT_COLOR);
   const [brushSize, setBrushSize] = useState<number>(BRUSH_SIZES[1].size);
   const [isEraser, setIsEraser] = useState(false);
   const [initialDrawingUrl, setInitialDrawingUrl] = useState<string | null>(null);
@@ -195,7 +195,7 @@ function DrawPageContent() {
 
   if (!mounted || !girl || !initialReady) {
     return (
-      <main className="flex h-dvh max-h-dvh min-h-0 items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
+      <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
         <p className="text-xl text-gray-700">טוען...</p>
       </main>
     );
@@ -223,18 +223,21 @@ function DrawPageContent() {
         ) : null
       }
     >
-      <div className="flex w-full min-w-0 max-w-4xl flex-1 min-h-0 flex-col gap-0.5 overflow-x-hidden overflow-y-hidden sm:gap-1">
-        <div className="flex min-w-0 flex-1 min-h-0 flex-col gap-1 overflow-x-hidden overflow-y-hidden rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 p-1 shadow-md shadow-violet-200/30 ring-1 ring-white/80 max-sm:gap-2.5 max-sm:p-1.5 sm:gap-1.5">
-          <div className="relative flex min-h-0 w-full min-w-0 flex-1 flex-col items-stretch overflow-hidden rounded-xl bg-white/60 shadow-inner ring-2 ring-violet-100/90 max-sm:min-h-[55vh]">
-            <FreeDrawCanvas
-              ref={canvasRef}
-              brushColor={color}
-              brushSize={brushSize}
-              isEraser={isEraser}
-              initialDataUrl={initialDrawingUrl}
-              onStrokeEnd={handleStrokeEnd}
-              gameCardMobile
-            />
+      <div className="flex h-full min-h-0 w-full min-w-0 max-w-4xl flex-1 flex-col gap-1 sm:mx-auto sm:gap-2">
+        <div className="grid min-h-0 w-full flex-1 grid-rows-[minmax(0,1fr)_auto] gap-1.5 rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 p-1.5 max-sm:gap-1 max-sm:p-1 shadow-md shadow-violet-200/30 ring-1 ring-white/80 sm:gap-3 sm:p-2">
+          {/* Mobile (<sm): h-full + w-auto + centered — unchanged. Desktop (sm+): full card width + h from aspect so drawable fills the frame (no narrow centered box). */}
+          <div className="flex h-full min-h-0 min-w-0 w-full items-stretch justify-center max-sm:justify-center sm:justify-start">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg max-sm:h-full max-sm:max-h-full max-sm:w-auto max-sm:max-w-full max-sm:shrink-0 sm:h-auto sm:w-full sm:max-h-full sm:min-h-0 sm:self-start">
+              <FreeDrawCanvas
+                ref={canvasRef}
+                brushColor={color}
+                brushSize={brushSize}
+                isEraser={isEraser}
+                initialDataUrl={initialDrawingUrl}
+                onStrokeEnd={handleStrokeEnd}
+                gameCardMobile
+              />
+            </div>
           </div>
           <DrawingToolbar
             selectedColor={color}
@@ -260,7 +263,7 @@ export default function DrawPage() {
   return (
     <Suspense
       fallback={
-        <main className="flex h-dvh max-h-dvh min-h-0 items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
+        <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
           <p className="text-xl text-gray-700">טוען...</p>
         </main>
       }

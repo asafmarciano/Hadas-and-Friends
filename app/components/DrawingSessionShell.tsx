@@ -43,12 +43,12 @@ export function DrawingSessionShell({
 }: DrawingSessionShellProps) {
   const router = useRouter();
   const mainBase =
-    "flex-1 flex flex-col min-h-0 overflow-hidden gap-2 py-2 pb-3 max-sm:min-w-0 max-sm:min-h-0 max-sm:px-2 max-sm:pt-3 max-sm:pb-2 sm:gap-4 sm:py-4 sm:pb-6 sm:px-3 sm:items-center";
+    "flex min-h-0 w-full flex-1 flex-col gap-1 max-sm:min-w-0 max-sm:gap-1 max-sm:px-2 max-sm:py-1 max-sm:pb-2 sm:gap-3 sm:px-3 sm:py-3 sm:pb-5";
   const mainClasses = mainClassName ? `${mainBase} ${mainClassName}` : mainBase;
 
   return (
     <div
-      className="flex h-dvh max-h-dvh min-h-0 w-full min-w-0 flex-col overflow-hidden overscroll-none bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50"
+      className="flex h-dvh max-h-dvh min-h-0 w-full min-w-0 flex-col bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50"
       dir="rtl"
     >
       <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 pointer-events-none max-w-[90vw]">
@@ -58,7 +58,7 @@ export function DrawingSessionShell({
         {bannerExtra}
       </div>
       <ReactionEffectsLayer reactions={reactionInstances} onExpired={onReactionExpired} />
-      <header className="shrink-0 flex flex-wrap items-center justify-between gap-2 min-w-0 max-sm:px-2 max-sm:py-3 sm:gap-3 sm:px-3 py-2 sm:py-3 border-b border-white/60 bg-white/60 backdrop-blur-sm">
+      <header className="shrink-0 flex flex-wrap items-center justify-between gap-2 min-w-0 max-sm:px-2 max-sm:py-2 sm:gap-3 sm:px-3 py-2 sm:py-3 border-b border-white/60 bg-white/60 backdrop-blur-sm">
         <div className="flex items-center gap-2 min-w-0 sm:gap-3">
           {girl.avatar_url ? (
             <img

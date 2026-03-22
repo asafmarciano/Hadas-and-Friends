@@ -231,10 +231,11 @@ export const FreeDrawCanvas = forwardRef<FreeDrawCanvasHandle, Props>(function F
       ref={containerRef}
       dir="ltr"
       className={
-        "relative box-border h-full min-h-0 w-full min-w-0 max-w-full flex-1 touch-none self-stretch overflow-hidden bg-white max-sm:min-h-[55vh] max-sm:aspect-auto sm:aspect-[4/3] sm:min-h-0 " +
+        /* Fills parent box; parent sets 4:3 and max size via flex layout (see /draw, /game). */
+        "relative box-border h-full min-h-0 w-full min-w-0 max-w-full touch-none overflow-hidden bg-white " +
         (gameCardMobile
-          ? "max-sm:rounded-lg max-sm:border max-sm:border-white/90 max-sm:shadow-inner sm:max-h-[62vh] sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl"
-          : "max-sm:rounded-2xl max-sm:border-2 max-sm:border-white sm:max-h-[62vh] sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl")
+          ? "rounded-lg border border-white/90 shadow-inner sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl"
+          : "rounded-2xl border-2 border-white sm:rounded-3xl sm:border-4 sm:border-white sm:shadow-xl")
       }
       style={{ touchAction: "none" }}
     >

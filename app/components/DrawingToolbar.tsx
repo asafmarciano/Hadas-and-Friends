@@ -1,6 +1,7 @@
 "use client";
 
 import { ColorPalette } from "./ColorPalette";
+import { GamePaintPaletteStrip } from "./GamePaintPaletteStrip";
 import { BrushSizePicker } from "./BrushSizePicker";
 
 interface DrawingToolbarProps {
@@ -72,14 +73,8 @@ export function DrawingToolbar({
     "min-h-[32px] px-1.5 py-0.5 text-[0.65rem] sm:min-h-[36px] sm:px-2 sm:py-1 sm:text-xs rounded-md border font-bold touch-manipulation sm:rounded-lg";
 
   return (
-    <div className="flex w-full min-w-0 shrink-0 flex-col gap-1 max-sm:gap-1.5 sm:gap-1.5">
-      <div className="shrink-0 rounded-lg border border-violet-100/70 bg-white/60 px-1 py-0.5 shadow-sm sm:rounded-xl sm:px-1.5 sm:py-1">
-        <ColorPalette
-          selectedColor={selectedColor}
-          onSelectColor={onSelectColor}
-          gameMobileGrid
-        />
-      </div>
+    <div className="flex w-full min-w-0 shrink-0 flex-col gap-1 max-sm:gap-1 sm:gap-1.5">
+      <GamePaintPaletteStrip selectedColor={selectedColor} onSelectColor={onSelectColor} isEraser={isEraser} />
       <div className="shrink-0 rounded-lg border border-sky-100/80 bg-gradient-to-r from-sky-50/70 to-violet-50/50 px-1 py-0.5 shadow-sm sm:rounded-xl sm:px-1.5 sm:py-1">
         <div className="flex flex-wrap items-center justify-center gap-0.5 sm:gap-1.5">
           <BrushSizePicker selectedSize={brushSize} onSelectSize={onBrushSizeChange} gameMobile />

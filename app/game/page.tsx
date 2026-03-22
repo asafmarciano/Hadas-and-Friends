@@ -17,6 +17,8 @@ import {
 } from "../lib/reactions";
 import { riddles, type RiddleRecord } from "@/app/data/riddles";
 import { imageRiddles } from "@/app/data/imageRiddles";
+import { GAME_DRAW_PALETTE as PALETTE } from "@/app/lib/gameDrawPalette";
+import { GamePaintPaletteStrip } from "@/app/components/GamePaintPaletteStrip";
 
 const allRiddles: RiddleRecord[] = [...riddles, ...imageRiddles];
 
@@ -39,20 +41,6 @@ function jsonRiddleToActive(raw: RiddleRecord): ActiveQuiz {
     typeof raw.image === "string" && raw.image.trim() !== "" ? raw.image.trim() : undefined;
   return { question: raw.prompt, choices, correctIndex, image };
 }
-
-/** Child-friendly palette — red, orange, yellow, green, light blue, blue, purple, pink, brown, black */
-const PALETTE = [
-  "#ef4444",
-  "#fb923c",
-  "#facc15",
-  "#22c55e",
-  "#7dd3fc",
-  "#2563eb",
-  "#a78bfa",
-  "#f472b6",
-  "#92400e",
-  "#171717",
-] as const;
 
 type Phase = "paint" | "quiz";
 
@@ -439,7 +427,7 @@ export default function GamePage() {
 
   if (!mounted || !girl) {
     return (
-      <main className="flex h-dvh max-h-dvh min-h-0 items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
+      <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
         <p className="text-xl text-gray-700">טוען...</p>
       </main>
     );
@@ -463,65 +451,53 @@ export default function GamePage() {
         mainClassName={phase === "quiz" ? "pointer-events-none" : undefined}
         showGalleryLink={false}
       >
-        <div className="w-full max-w-4xl flex flex-col flex-1 min-h-0 gap-0.5 overflow-hidden sm:gap-1">
-              <div className="rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 shadow-md shadow-violet-200/30 ring-1 ring-white/80 p-1 max-sm:p-1.5 flex flex-col flex-1 min-h-0 gap-1 max-sm:gap-2.5 sm:gap-1.5 overflow-hidden">
-                {/* Full-area drawable canvas; line art centered underneath */}
-                <div className="relative flex-1 min-h-0 max-sm:min-h-[55vh] rounded-xl overflow-hidden ring-2 ring-violet-100/90 shadow-inner bg-white/60">
-                  <div ref={wrapRef} className="absolute inset-0 w-full h-full min-h-0">
-                    <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none p-0.5 bg-neutral-100">
-                      {!coloringListReady ? (
-                        <span className="text-sm font-medium text-gray-400">טוען תמונה…</span>
-                      ) : coloringImageUrl ? (
-                        <img
-                          key={coloringImageUrl}
-                          src={coloringImageUrl}
-                          alt=""
-                          className="h-full max-h-full w-auto max-w-full object-contain pointer-events-none select-none"
-                          draggable={false}
-                        />
-                      ) : (
-                        <span className="text-sm font-medium text-gray-400 text-center px-2">
-                          אין תמונות זמינות
-                        </span>
-                      )}
+        <div className="flex h-full min-h-0 w-full min-w-0 max-w-4xl flex-1 flex-col gap-1 sm:mx-auto sm:gap-2">
+              <div className="grid min-h-0 w-full flex-1 grid-rows-[minmax(0,1fr)_auto] gap-1.5 rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 p-1.5 max-sm:gap-1 max-sm:p-1 shadow-md shadow-violet-200/30 ring-1 ring-white/80 sm:gap-3 sm:p-2">
+                <div className="flex h-full min-h-0 min-w-0 w-full items-stretch justify-center max-sm:justify-center sm:justify-start">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl ring-2 ring-violet-100/90 max-sm:h-full max-sm:max-h-full max-sm:w-auto max-sm:max-w-full max-sm:shrink-0 sm:h-auto sm:w-full sm:max-h-full sm:min-h-0 sm:self-start">
+                    <div ref={wrapRef} className="absolute inset-0 h-full w-full min-h-0">
+                      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none bg-neutral-100 p-0.5">
+                        {!coloringListReady ? (
+                          <span className="text-sm font-medium text-gray-400">טוען תמונה…</span>
+                        ) : coloringImageUrl ? (
+                          <img
+                            key={coloringImageUrl}
+                            src={coloringImageUrl}
+                            alt=""
+                            className="h-full max-h-full w-auto max-w-full object-contain pointer-events-none select-none"
+                            draggable={false}
+                          />
+                        ) : (
+                          <span className="text-sm font-medium text-gray-400 text-center px-2">
+                            אין תמונות זמינות
+                          </span>
+                        )}
+                      </div>
+                      <canvas
+                        ref={drawCanvasRef}
+                        className={`absolute inset-0 z-10 h-full w-full touch-none ${
+                          phase === "paint" ? (isEraser ? "cursor-cell" : "cursor-crosshair") : "cursor-default pointer-events-none"
+                        }`}
+                        onPointerDown={onPointerDown}
+                        onPointerMove={onPointerMove}
+                        onPointerUp={onPointerUp}
+                        onPointerCancel={onPointerUp}
+                      />
                     </div>
-                    <canvas
-                      ref={drawCanvasRef}
-                      className={`absolute inset-0 z-10 h-full w-full touch-none ${
-                        phase === "paint" ? (isEraser ? "cursor-cell" : "cursor-crosshair") : "cursor-default pointer-events-none"
-                      }`}
-                      onPointerDown={onPointerDown}
-                      onPointerMove={onPointerMove}
-                      onPointerUp={onPointerUp}
-                      onPointerCancel={onPointerUp}
-                    />
                   </div>
                 </div>
 
+                <div className="min-w-0">
                 {phase === "paint" && (
                   <>
-                    <div className="rounded-lg border border-violet-100/70 bg-white/60 px-1 py-0.5 shadow-sm shrink-0 sm:rounded-xl sm:px-1.5 sm:py-1">
-                      <div className="mx-auto grid w-full max-w-md grid-cols-5 justify-items-center gap-0.5 sm:gap-1">
-                        {PALETTE.map((hex) => (
-                          <button
-                            key={hex}
-                            type="button"
-                            onClick={() => {
-                              setSelectedColor(hex);
-                              setIsEraser(false);
-                            }}
-                            className="h-7 w-7 rounded-full border-2 shadow-sm transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-violet-300/70 active:scale-95 touch-manipulation sm:h-9 sm:w-9"
-                            style={{
-                              backgroundColor: hex,
-                              borderColor: !isEraser && selectedColor === hex ? "#5b21b6" : "rgba(255,255,255,0.95)",
-                              boxShadow: !isEraser && selectedColor === hex ? "0 0 0 1px #ddd6fe" : undefined,
-                            }}
-                            aria-label="בחירת צבע"
-                            aria-pressed={!isEraser && selectedColor === hex}
-                          />
-                        ))}
-                      </div>
-                    </div>
+                    <GamePaintPaletteStrip
+                      selectedColor={selectedColor}
+                      isEraser={isEraser}
+                      onSelectColor={(hex) => {
+                        setSelectedColor(hex);
+                        setIsEraser(false);
+                      }}
+                    />
 
                     <div className="rounded-lg border border-sky-100/80 bg-gradient-to-r from-sky-50/70 to-violet-50/50 px-1 py-0.5 shadow-sm shrink-0 sm:rounded-xl sm:px-1.5 sm:py-1">
                       <div className="flex flex-wrap items-center justify-center gap-0.5 sm:gap-1.5">
@@ -579,6 +555,7 @@ export default function GamePage() {
                     </button>
                   </>
                 )}
+                </div>
               </div>
             </div>
       </DrawingSessionShell>
