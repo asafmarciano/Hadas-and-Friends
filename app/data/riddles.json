@@ -1,0 +1,9102 @@
+[
+  {
+    "id": 1,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "מ",
+      "ק",
+      "נ",
+      "ת"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 2,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כדור'?",
+    "options": [
+      "6",
+      "4",
+      "3",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 3,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כלב'?",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 4,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ל_ם?",
+    "options": [
+      "ח",
+      "צ",
+      "כ",
+      "ג"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 5,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ב?",
+    "options": [
+      "ל",
+      "ג",
+      "נ",
+      "פ"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 6,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: בנ_ה?",
+    "options": [
+      "כ",
+      "ת",
+      "נ",
+      "ה"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 7,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "כלב",
+      "חתול",
+      "אריה"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 8,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "חתול",
+      "עט",
+      "ציפור"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 9,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "4",
+      "6",
+      "7",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 10,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שו_חן?",
+    "options": [
+      "ל",
+      "ז",
+      "ג",
+      "מ"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 11,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_גה?",
+    "options": [
+      "ו",
+      "מ",
+      "ש",
+      "י"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 12,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ח_ב?",
+    "options": [
+      "ת",
+      "ו",
+      "ז",
+      "ל"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 13,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "ח",
+      "ז",
+      "ת",
+      "צ"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 14,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "אריה",
+      "ספר",
+      "סוס"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 15,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "עט",
+      "כלב",
+      "אריה"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 16,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "בננה",
+      "ציפור",
+      "אריה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 17,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "אריה",
+      "סוס",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 18,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "כלב",
+      "עוגה",
+      "שוקולד",
+      "חתול"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 19,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חלב'?",
+    "options": [
+      "2",
+      "4",
+      "5",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 20,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "ג",
+      "ע",
+      "ח",
+      "ד"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 21,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ציפור'?",
+    "options": [
+      "6",
+      "7",
+      "5",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 22,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "ציפור",
+      "שוקולד",
+      "דג"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 23,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עט'?",
+    "options": [
+      "4",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": 24,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "אריה",
+      "דג",
+      "שולחן"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 25,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ציפור'?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "7"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 26,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "חתול",
+      "דג",
+      "ציפור"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 27,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "חתול",
+      "שולחן",
+      "סוס"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 28,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כיסא",
+      "ציפור",
+      "חתול",
+      "כלב"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 29,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "כלב",
+      "עוגה",
+      "תפוח"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 30,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: תפ_ח?",
+    "options": [
+      "ת",
+      "ס",
+      "ו",
+      "ע"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 31,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "אריה",
+      "מחברת",
+      "דג"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 32,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "י",
+      "ג",
+      "צ",
+      "ה"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 33,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "דג",
+      "כלב",
+      "בננה"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 34,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ת_וח?",
+    "options": [
+      "פ",
+      "ד",
+      "ה",
+      "מ"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 35,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "כלב",
+      "חתול",
+      "סוס"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 36,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: תפ_ח?",
+    "options": [
+      "ו",
+      "ק",
+      "ע",
+      "ז"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 37,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ספר'?",
+    "options": [
+      "4",
+      "2",
+      "3",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 38,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "חתול",
+      "חלב",
+      "ציפור"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 39,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "אריה",
+      "כדור",
+      "ציפור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 40,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "חתול",
+      "סוס",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 41,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שו_חן?",
+    "options": [
+      "ס",
+      "נ",
+      "פ",
+      "ל"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 42,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "חתול",
+      "שוקולד",
+      "בננה"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 43,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: צי_ור?",
+    "options": [
+      "ש",
+      "ת",
+      "ר",
+      "פ"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 44,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ח?",
+    "options": [
+      "ח",
+      "א",
+      "ט",
+      "פ"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 45,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: לח_?",
+    "options": [
+      "א",
+      "ח",
+      "ס",
+      "ם"
+    ],
+    "answer": "ם"
+  },
+  {
+    "id": 46,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "אריה",
+      "דג",
+      "כדור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 47,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כיס_?",
+    "options": [
+      "ג",
+      "ל",
+      "א",
+      "ב"
+    ],
+    "answer": "א"
+  },
+  {
+    "id": 48,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "ציפור",
+      "כדור",
+      "סוס"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 49,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ספ_?",
+    "options": [
+      "צ",
+      "כ",
+      "ר",
+      "א"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 50,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "בננה",
+      "סוס",
+      "שוקולד"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 51,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "אריה",
+      "שולחן",
+      "חתול"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 52,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי כ?",
+    "options": [
+      "ו",
+      "צ",
+      "ל",
+      "ז"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 53,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "ק",
+      "כ",
+      "א",
+      "ט"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 54,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "בננה",
+      "לחם",
+      "שוקולד"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 55,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כלב'?",
+    "options": [
+      "4",
+      "5",
+      "2",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 56,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _חברת?",
+    "options": [
+      "צ",
+      "ס",
+      "מ",
+      "ש"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 57,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ז?",
+    "options": [
+      "ח",
+      "נ",
+      "ה",
+      "ז"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 58,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: אר_ה?",
+    "options": [
+      "ד",
+      "ב",
+      "י",
+      "ק"
+    ],
+    "answer": "י"
+  },
+  {
+    "id": 59,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ו?",
+    "options": [
+      "מ",
+      "ז",
+      "ק",
+      "ח"
+    ],
+    "answer": "ז"
+  },
+  {
+    "id": 60,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "שוקולד",
+      "אריה",
+      "חלב"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 61,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "7",
+      "4",
+      "6",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 62,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "כלב",
+      "כיסא",
+      "ציפור"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 63,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "כדור",
+      "סוס",
+      "חתול"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 64,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ב?",
+    "options": [
+      "פ",
+      "ג",
+      "ס",
+      "ת"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 65,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "ו",
+      "צ",
+      "נ",
+      "ס"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 66,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "י",
+      "ג",
+      "ס",
+      "מ"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 67,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "כדור",
+      "ציפור",
+      "אריה"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 68,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ג?",
+    "options": [
+      "ז",
+      "ק",
+      "ד",
+      "ח"
+    ],
+    "answer": "ד"
+  },
+  {
+    "id": 69,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי צ?",
+    "options": [
+      "ש",
+      "ק",
+      "י",
+      "ח"
+    ],
+    "answer": "ק"
+  },
+  {
+    "id": 70,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "ר",
+      "ט",
+      "ו",
+      "נ"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 71,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ק?",
+    "options": [
+      "ט",
+      "צ",
+      "ר",
+      "כ"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 72,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "חלב",
+      "סוס",
+      "עוגה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 73,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כיסא",
+      "כלב",
+      "חתול",
+      "ציפור"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 74,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "סוס",
+      "חתול",
+      "כלב"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 75,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "חתול",
+      "ספר",
+      "כלב"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 76,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ו?",
+    "options": [
+      "ו",
+      "ה",
+      "ע",
+      "ז"
+    ],
+    "answer": "ז"
+  },
+  {
+    "id": 77,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _פוח?",
+    "options": [
+      "ת",
+      "נ",
+      "כ",
+      "צ"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 78,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _ט?",
+    "options": [
+      "ת",
+      "צ",
+      "ע",
+      "מ"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 79,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "שוקולד",
+      "דג",
+      "חתול",
+      "תפוח"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 80,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שוקולד'?",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "5"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": 81,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "ציפור",
+      "עט",
+      "סוס"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 82,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _דור?",
+    "options": [
+      "א",
+      "ח",
+      "כ",
+      "ו"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 83,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "6",
+      "7",
+      "5",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 84,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "אריה",
+      "חתול",
+      "עוגה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 85,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ק?",
+    "options": [
+      "ט",
+      "ק",
+      "ו",
+      "ר"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 86,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "סוס",
+      "חתול",
+      "שולחן"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 87,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כלב'?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 88,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "סוס",
+      "כלב",
+      "בננה"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 89,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ר?",
+    "options": [
+      "א",
+      "ד",
+      "ל",
+      "ש"
+    ],
+    "answer": "ש"
+  },
+  {
+    "id": 90,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "לחם",
+      "סוס",
+      "דג"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 91,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "כלב",
+      "סוס",
+      "לחם"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 92,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "7",
+      "5",
+      "6",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 93,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ב?",
+    "options": [
+      "מ",
+      "כ",
+      "נ",
+      "ג"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 94,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'בננה'?",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 95,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ספר'?",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 96,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: צי_ור?",
+    "options": [
+      "ס",
+      "פ",
+      "ה",
+      "ח"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 97,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "עט",
+      "דג",
+      "סוס"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 98,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "חתול",
+      "דג",
+      "כלב"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 99,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "חתול",
+      "שוקולד",
+      "כלב"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 100,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "בננה",
+      "דג",
+      "ציפור"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 101,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ספר",
+      "ציפור",
+      "אריה",
+      "חתול"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 102,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "מחברת",
+      "חתול",
+      "כלב",
+      "דג"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 103,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "מחברת",
+      "אריה",
+      "דג"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 104,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ו?",
+    "options": [
+      "ק",
+      "ת",
+      "ש",
+      "ז"
+    ],
+    "answer": "ז"
+  },
+  {
+    "id": 105,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "כלב",
+      "ספר",
+      "דג"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 106,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כדור",
+      "כלב",
+      "חתול",
+      "סוס"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 107,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ציפור'?",
+    "options": [
+      "7",
+      "6",
+      "5",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 108,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "כ",
+      "צ",
+      "ס",
+      "ז"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 109,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ש?",
+    "options": [
+      "כ",
+      "ת",
+      "ע",
+      "ח"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 110,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "סוס",
+      "ציפור",
+      "דג"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 111,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'אריה'?",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 112,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ס_ס?",
+    "options": [
+      "ו",
+      "ל",
+      "ת",
+      "ה"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 113,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חלב'?",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 114,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ז?",
+    "options": [
+      "ה",
+      "ג",
+      "ח",
+      "ז"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 115,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "ציפור",
+      "שוקולד",
+      "דג",
+      "חלב"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 116,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "אריה",
+      "דג",
+      "עוגה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 117,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "כדור",
+      "דג",
+      "חתול"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 118,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "סוס",
+      "עוגה",
+      "שוקולד"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 119,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "חתול",
+      "אריה",
+      "שולחן"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 120,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וס?",
+    "options": [
+      "ב",
+      "ע",
+      "ס",
+      "ז"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 121,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "חלב",
+      "חתול",
+      "לחם"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 122,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'בננה'?",
+    "options": [
+      "5",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 123,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "ציפור",
+      "עוגה",
+      "סוס",
+      "שוקולד"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 124,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עוגה'?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 125,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: תפו_?",
+    "options": [
+      "כ",
+      "ע",
+      "ה",
+      "ח"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 126,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ו?",
+    "options": [
+      "ז",
+      "י",
+      "ג",
+      "ת"
+    ],
+    "answer": "ז"
+  },
+  {
+    "id": 127,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "סוס",
+      "דג",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 128,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ספר'?",
+    "options": [
+      "5",
+      "4",
+      "2",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 129,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "כלב",
+      "עוגה",
+      "ציפור"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 130,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כדור",
+      "סוס",
+      "דג",
+      "אריה"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 131,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "סוס",
+      "אריה",
+      "כיסא"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 132,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "י",
+      "ו",
+      "נ",
+      "צ"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 133,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ה?",
+    "options": [
+      "ק",
+      "ש",
+      "א",
+      "ו"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 134,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _ט?",
+    "options": [
+      "ע",
+      "ט",
+      "ס",
+      "ד"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 135,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: בננ_?",
+    "options": [
+      "כ",
+      "ת",
+      "ה",
+      "ר"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 136,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "לחם",
+      "חלב",
+      "בננה"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 137,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "מ",
+      "א",
+      "ז",
+      "נ"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 138,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "מ",
+      "ט",
+      "ש",
+      "י"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 139,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "אריה",
+      "ציפור",
+      "חלב"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 140,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ספר",
+      "דג",
+      "חתול",
+      "כלב"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 141,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "כדור",
+      "ציפור",
+      "חתול"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 142,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ספר",
+      "חתול",
+      "ציפור",
+      "סוס"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 143,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "ספר",
+      "סוס",
+      "דג"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 144,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "לחם",
+      "דג",
+      "סוס"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 145,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ו?",
+    "options": [
+      "ס",
+      "ז",
+      "א",
+      "ל"
+    ],
+    "answer": "ז"
+  },
+  {
+    "id": 146,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "6",
+      "4",
+      "7",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 147,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _פוח?",
+    "options": [
+      "ש",
+      "ס",
+      "ב",
+      "ת"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 148,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "אריה",
+      "שוקולד",
+      "תפוח"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 149,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ח?",
+    "options": [
+      "ט",
+      "ז",
+      "כ",
+      "ג"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 150,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'אריה'?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 151,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "סוס",
+      "לחם",
+      "תפוח"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 152,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "כלב",
+      "מחברת",
+      "ציפור"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 153,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כלב'?",
+    "options": [
+      "5",
+      "4",
+      "2",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 154,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ו?",
+    "options": [
+      "כ",
+      "ע",
+      "ז",
+      "ה"
+    ],
+    "answer": "ז"
+  },
+  {
+    "id": 155,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כיסא",
+      "אריה",
+      "כלב",
+      "דג"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 156,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי נ?",
+    "options": [
+      "ס",
+      "פ",
+      "ב",
+      "ח"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 157,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "ציפור",
+      "אריה",
+      "בננה",
+      "עוגה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 158,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "ציפור",
+      "כלב",
+      "עוגה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 159,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ספר'?",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 160,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ציפור'?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "7"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 161,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי נ?",
+    "options": [
+      "ט",
+      "ד",
+      "ר",
+      "ס"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 162,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: מחב_ת?",
+    "options": [
+      "ד",
+      "נ",
+      "א",
+      "ר"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 163,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ק?",
+    "options": [
+      "ע",
+      "ר",
+      "ס",
+      "ש"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 164,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי צ?",
+    "options": [
+      "ק",
+      "י",
+      "ח",
+      "ה"
+    ],
+    "answer": "ק"
+  },
+  {
+    "id": 165,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי א?",
+    "options": [
+      "ש",
+      "צ",
+      "ב",
+      "ר"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 166,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כיסא'?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 167,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ע?",
+    "options": [
+      "כ",
+      "ו",
+      "פ",
+      "ק"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 168,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "כלב",
+      "עוגה",
+      "תפוח"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 169,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חלב'?",
+    "options": [
+      "5",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 170,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'סוס'?",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 171,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "עוגה",
+      "סוס",
+      "חלב",
+      "דג"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 172,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וגה?",
+    "options": [
+      "ע",
+      "מ",
+      "ט",
+      "ש"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 173,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי צ?",
+    "options": [
+      "ב",
+      "ק",
+      "כ",
+      "ש"
+    ],
+    "answer": "ק"
+  },
+  {
+    "id": 174,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "סוס",
+      "מחברת",
+      "כלב"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 175,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ציפ_ר?",
+    "options": [
+      "ש",
+      "י",
+      "ו",
+      "א"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 176,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: מחבר_?",
+    "options": [
+      "ח",
+      "ת",
+      "י",
+      "ו"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 177,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "אריה",
+      "כדור",
+      "חתול"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 178,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 179,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כלב'?",
+    "options": [
+      "4",
+      "5",
+      "3",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 180,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "שוקולד",
+      "חתול",
+      "לחם"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 181,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: אר_ה?",
+    "options": [
+      "א",
+      "ד",
+      "ה",
+      "י"
+    ],
+    "answer": "י"
+  },
+  {
+    "id": 182,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי צ?",
+    "options": [
+      "ה",
+      "ק",
+      "מ",
+      "ו"
+    ],
+    "answer": "ק"
+  },
+  {
+    "id": 183,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "כדור",
+      "אריה",
+      "סוס"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 184,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "אריה",
+      "שולחן",
+      "סוס"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 185,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "דג",
+      "כיסא",
+      "סוס"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 186,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'אריה'?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 187,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: מ_ברת?",
+    "options": [
+      "ס",
+      "מ",
+      "ח",
+      "ק"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 188,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "סוס",
+      "חתול",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 189,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: חת_ל?",
+    "options": [
+      "כ",
+      "ג",
+      "ב",
+      "ו"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 190,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: מח_רת?",
+    "options": [
+      "ו",
+      "נ",
+      "צ",
+      "ב"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 191,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ספ_?",
+    "options": [
+      "א",
+      "ר",
+      "פ",
+      "ד"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 192,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ה?",
+    "options": [
+      "נ",
+      "כ",
+      "ו",
+      "ר"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 193,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "ל",
+      "ר",
+      "מ",
+      "ב"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 194,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "ציפור",
+      "שוקולד",
+      "תפוח",
+      "עוגה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 195,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "דג",
+      "חתול",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 196,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "כלב",
+      "עוגה",
+      "סוס",
+      "בננה"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 197,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'תפוח'?",
+    "options": [
+      "5",
+      "6",
+      "3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 198,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ציפ_ר?",
+    "options": [
+      "ו",
+      "כ",
+      "נ",
+      "ד"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 199,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "סוס",
+      "ציפור",
+      "כדור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 200,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שוקולד'?",
+    "options": [
+      "5",
+      "6",
+      "8",
+      "7"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": 201,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "דג",
+      "סוס",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 202,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ת_וח?",
+    "options": [
+      "פ",
+      "ו",
+      "ט",
+      "צ"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 203,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ט?",
+    "options": [
+      "צ",
+      "י",
+      "ר",
+      "ע"
+    ],
+    "answer": "י"
+  },
+  {
+    "id": 204,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "סוס",
+      "אריה",
+      "שולחן"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 205,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "ציפור",
+      "מחברת",
+      "סוס"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 206,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "ציפור",
+      "מחברת",
+      "סוס"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 207,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'תפוח'?",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 208,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: חת_ל?",
+    "options": [
+      "ו",
+      "ג",
+      "ס",
+      "מ"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 209,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _ט?",
+    "options": [
+      "ק",
+      "ע",
+      "נ",
+      "ג"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 210,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "צ",
+      "ע",
+      "מ",
+      "נ"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 211,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ע?",
+    "options": [
+      "ד",
+      "נ",
+      "פ",
+      "ו"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 212,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כיסא'?",
+    "options": [
+      "3",
+      "6",
+      "5",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 213,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וס?",
+    "options": [
+      "ח",
+      "צ",
+      "ס",
+      "פ"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 214,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "דג",
+      "שולחן",
+      "ציפור"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 215,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'סוס'?",
+    "options": [
+      "5",
+      "3",
+      "2",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 216,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חלב",
+      "סוס",
+      "כלב",
+      "אריה"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 217,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כדור'?",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 218,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "ציפור",
+      "תפוח",
+      "עוגה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 219,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ה?",
+    "options": [
+      "ת",
+      "ד",
+      "צ",
+      "ו"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 220,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'מחברת'?",
+    "options": [
+      "7",
+      "6",
+      "5",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 221,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "סוס",
+      "ספר",
+      "ציפור"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 222,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "דג",
+      "אריה",
+      "סוס"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 223,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "שוקולד",
+      "חתול",
+      "סוס"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 224,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ר?",
+    "options": [
+      "ש",
+      "ק",
+      "ט",
+      "ל"
+    ],
+    "answer": "ש"
+  },
+  {
+    "id": 225,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "ג",
+      "ע",
+      "פ",
+      "ב"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 226,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "ש",
+      "ט",
+      "ע",
+      "מ"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 227,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וגה?",
+    "options": [
+      "א",
+      "פ",
+      "ע",
+      "ל"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 228,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "דג",
+      "סוס",
+      "עט"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 229,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "חלב",
+      "שוקולד",
+      "עוגה"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 230,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ציפור'?",
+    "options": [
+      "4",
+      "7",
+      "6",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 231,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'דג'?",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": 232,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "ציפור",
+      "חתול",
+      "עט"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 233,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "דג",
+      "ציפור",
+      "בננה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 234,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ספר'?",
+    "options": [
+      "2",
+      "5",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 235,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "5",
+      "7",
+      "6",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 236,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי צ?",
+    "options": [
+      "ת",
+      "פ",
+      "ר",
+      "ק"
+    ],
+    "answer": "ק"
+  },
+  {
+    "id": 237,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "ציפור",
+      "כלב",
+      "ספר"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 238,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "סוס",
+      "אריה",
+      "ספר"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 239,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ש?",
+    "options": [
+      "י",
+      "ר",
+      "ת",
+      "מ"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 240,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כלב'?",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 241,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי י?",
+    "options": [
+      "ר",
+      "כ",
+      "א",
+      "ל"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 242,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "שוקולד",
+      "בננה",
+      "אריה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 243,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "תפוח",
+      "כלב",
+      "לחם"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 244,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "צ",
+      "ד",
+      "ג",
+      "ז"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 245,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי נ?",
+    "options": [
+      "ת",
+      "נ",
+      "ס",
+      "ק"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 246,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "5",
+      "7",
+      "6",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 247,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "אריה",
+      "כדור",
+      "דג"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 248,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עוגה'?",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 249,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "צ",
+      "ו",
+      "ל",
+      "ט"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 250,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שוקולד'?",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "5"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": 251,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שוקולד'?",
+    "options": [
+      "7",
+      "8",
+      "5",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": 252,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'לחם'?",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 253,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חלב'?",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 254,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "שוקולד",
+      "בננה",
+      "סוס"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 255,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "ציפור",
+      "כיסא",
+      "חתול"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 256,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "חתול",
+      "אריה",
+      "ציפור"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 257,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "כיסא",
+      "ציפור",
+      "כלב"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 258,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _פוח?",
+    "options": [
+      "ק",
+      "ת",
+      "ז",
+      "ו"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 259,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כיסא'?",
+    "options": [
+      "6",
+      "4",
+      "3",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 260,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי מ?",
+    "options": [
+      "צ",
+      "ל",
+      "י",
+      "נ"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 261,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "עוגה",
+      "אריה",
+      "תפוח",
+      "חתול"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 262,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "ציפור",
+      "כלב",
+      "כדור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 263,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ב?",
+    "options": [
+      "ג",
+      "ק",
+      "כ",
+      "י"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 264,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "כיסא",
+      "אריה",
+      "דג"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 265,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'סוס'?",
+    "options": [
+      "5",
+      "4",
+      "2",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 266,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "מחברת",
+      "חתול",
+      "דג"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 267,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "כיסא",
+      "חתול",
+      "דג"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 268,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "עט",
+      "דג",
+      "אריה"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 269,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "כלב",
+      "אריה",
+      "סוס",
+      "חתול"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 270,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: צ_פור?",
+    "options": [
+      "ז",
+      "מ",
+      "ב",
+      "י"
+    ],
+    "answer": "י"
+  },
+  {
+    "id": 271,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'תפוח'?",
+    "options": [
+      "4",
+      "3",
+      "6",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 272,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "א",
+      "ה",
+      "ע",
+      "מ"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 273,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'תפוח'?",
+    "options": [
+      "6",
+      "5",
+      "3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 274,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "לחם",
+      "סוס",
+      "כלב"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 275,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ה?",
+    "options": [
+      "מ",
+      "צ",
+      "ו",
+      "ש"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 276,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "כלב",
+      "ציפור",
+      "דג"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 277,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ע?",
+    "options": [
+      "פ",
+      "ס",
+      "ע",
+      "ח"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 278,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שוק_לד?",
+    "options": [
+      "ו",
+      "ה",
+      "ק",
+      "ס"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 279,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כדור'?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 280,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "אריה",
+      "דג",
+      "חתול"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 281,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כדור",
+      "סוס",
+      "אריה",
+      "כלב"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 282,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "ע",
+      "פ",
+      "ת",
+      "א"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 283,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'דג'?",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": 284,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי נ?",
+    "options": [
+      "ו",
+      "ס",
+      "ש",
+      "ט"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 285,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "חתול",
+      "מחברת",
+      "כלב"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 286,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'סוס'?",
+    "options": [
+      "2",
+      "5",
+      "4",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 287,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ה?",
+    "options": [
+      "ס",
+      "נ",
+      "צ",
+      "ו"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 288,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ק?",
+    "options": [
+      "ר",
+      "כ",
+      "ס",
+      "ד"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 289,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: חל_?",
+    "options": [
+      "פ",
+      "ו",
+      "כ",
+      "ב"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 290,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "כלב",
+      "חתול",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 291,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: מח_רת?",
+    "options": [
+      "ת",
+      "ב",
+      "ס",
+      "מ"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 292,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'בננה'?",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 293,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ג?",
+    "options": [
+      "ש",
+      "ג",
+      "ד",
+      "י"
+    ],
+    "answer": "ד"
+  },
+  {
+    "id": 294,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כלב'?",
+    "options": [
+      "2",
+      "4",
+      "5",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 295,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: א_יה?",
+    "options": [
+      "ר",
+      "ש",
+      "ע",
+      "ד"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 296,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "ציפור",
+      "דג",
+      "חתול"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 297,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "7"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 298,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ג?",
+    "options": [
+      "נ",
+      "ד",
+      "ל",
+      "א"
+    ],
+    "answer": "ד"
+  },
+  {
+    "id": 299,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ש_קולד?",
+    "options": [
+      "ו",
+      "ח",
+      "צ",
+      "ש"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 300,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: א_יה?",
+    "options": [
+      "פ",
+      "ת",
+      "צ",
+      "ר"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 301,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חתול'?",
+    "options": [
+      "3",
+      "6",
+      "5",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 302,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כ_ור?",
+    "options": [
+      "נ",
+      "ד",
+      "ט",
+      "ג"
+    ],
+    "answer": "ד"
+  },
+  {
+    "id": 303,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "אריה",
+      "חתול",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 304,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ספ_?",
+    "options": [
+      "ס",
+      "ת",
+      "ר",
+      "ב"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 305,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'אריה'?",
+    "options": [
+      "6",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 306,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "כלב",
+      "עוגה",
+      "לחם"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 307,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "דג",
+      "עט",
+      "חתול"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 308,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "ציפור",
+      "כלב",
+      "דג"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 309,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "בננה",
+      "כלב",
+      "אריה"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 310,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ספר",
+      "סוס",
+      "כלב",
+      "חתול"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 311,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חלב'?",
+    "options": [
+      "2",
+      "4",
+      "5",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 312,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "כלב",
+      "חתול",
+      "אריה",
+      "לחם"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 313,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: בנ_ה?",
+    "options": [
+      "נ",
+      "א",
+      "ז",
+      "מ"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 314,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "כלב",
+      "כדור",
+      "דג"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 315,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ז?",
+    "options": [
+      "י",
+      "ח",
+      "מ",
+      "כ"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 316,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "כיסא",
+      "אריה",
+      "סוס"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 317,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ציפור'?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "7"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 318,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "ע",
+      "ר",
+      "ז",
+      "ס"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 319,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ד?",
+    "options": [
+      "ט",
+      "י",
+      "פ",
+      "ה"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 320,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ארי_?",
+    "options": [
+      "ר",
+      "ג",
+      "ה",
+      "ט"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 321,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חתול'?",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 322,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "אריה",
+      "כלב",
+      "כיסא"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 323,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'מחברת'?",
+    "options": [
+      "5",
+      "7",
+      "6",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 324,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: אר_ה?",
+    "options": [
+      "ר",
+      "י",
+      "ע",
+      "פ"
+    ],
+    "answer": "י"
+  },
+  {
+    "id": 325,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כדור'?",
+    "options": [
+      "6",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 326,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כדור",
+      "חתול",
+      "סוס",
+      "ציפור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 327,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: חל_?",
+    "options": [
+      "ב",
+      "ד",
+      "ר",
+      "צ"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 328,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי צ?",
+    "options": [
+      "נ",
+      "ב",
+      "צ",
+      "ק"
+    ],
+    "answer": "ק"
+  },
+  {
+    "id": 329,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי נ?",
+    "options": [
+      "ע",
+      "י",
+      "פ",
+      "ס"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 330,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _ריה?",
+    "options": [
+      "ס",
+      "ש",
+      "א",
+      "ו"
+    ],
+    "answer": "א"
+  },
+  {
+    "id": 331,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "שולחן",
+      "סוס",
+      "אריה",
+      "חתול"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 332,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "ט",
+      "צ",
+      "ש",
+      "ת"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 333,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי מ?",
+    "options": [
+      "ת",
+      "נ",
+      "י",
+      "צ"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 334,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עוגה'?",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 335,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "אריה",
+      "עט",
+      "סוס"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 336,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: חל_?",
+    "options": [
+      "ע",
+      "מ",
+      "ב",
+      "י"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 337,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כ_סא?",
+    "options": [
+      "י",
+      "ט",
+      "ב",
+      "ס"
+    ],
+    "answer": "י"
+  },
+  {
+    "id": 338,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "מ",
+      "ר",
+      "נ",
+      "ע"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 339,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "עוגה",
+      "אריה",
+      "כלב"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 340,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: חת_ל?",
+    "options": [
+      "צ",
+      "ו",
+      "כ",
+      "ת"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 341,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "שוקולד",
+      "חתול",
+      "ציפור",
+      "דג"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 342,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "כלב",
+      "לחם",
+      "אריה",
+      "ציפור"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 343,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "כלב",
+      "ציפור",
+      "חלב"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 344,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "עוגה",
+      "כלב",
+      "חלב",
+      "דג"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 345,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ח_ב?",
+    "options": [
+      "ו",
+      "ל",
+      "נ",
+      "כ"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 346,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "לחם",
+      "עוגה",
+      "דג"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 347,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _דור?",
+    "options": [
+      "א",
+      "ד",
+      "כ",
+      "ג"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 348,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ל_ם?",
+    "options": [
+      "ס",
+      "ח",
+      "ו",
+      "מ"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 349,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חלב'?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 350,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'תפוח'?",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 351,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "עוגה",
+      "דג",
+      "סוס"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 352,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ספר'?",
+    "options": [
+      "5",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 353,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי מ?",
+    "options": [
+      "ש",
+      "ט",
+      "צ",
+      "נ"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 354,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חלב",
+      "שוקולד",
+      "אריה",
+      "עוגה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 355,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "מחברת",
+      "כלב",
+      "ציפור",
+      "דג"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 356,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כדור",
+      "חתול",
+      "סוס",
+      "דג"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 357,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כלב'?",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 358,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "מ",
+      "ז",
+      "י",
+      "ר"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 359,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כדו_?",
+    "options": [
+      "ג",
+      "ס",
+      "ר",
+      "ה"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 360,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _ט?",
+    "options": [
+      "מ",
+      "צ",
+      "ע",
+      "פ"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 361,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "אריה",
+      "ציפור",
+      "בננה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 362,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "דג",
+      "לחם",
+      "שוקולד"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 363,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "אריה",
+      "כלב",
+      "סוס"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 364,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "כלב",
+      "בננה",
+      "אריה"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 365,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כלב'?",
+    "options": [
+      "5",
+      "2",
+      "4",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 366,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ה?",
+    "options": [
+      "צ",
+      "ט",
+      "ז",
+      "ו"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 367,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'דג'?",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": 368,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ד?",
+    "options": [
+      "ג",
+      "צ",
+      "ת",
+      "ה"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 369,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ח_ב?",
+    "options": [
+      "צ",
+      "ז",
+      "ע",
+      "ל"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 370,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עט'?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": 371,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "תפוח",
+      "דג",
+      "חתול"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 372,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "דג",
+      "בננה",
+      "תפוח"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 373,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שוקולד'?",
+    "options": [
+      "8",
+      "6",
+      "7",
+      "5"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": 374,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי י?",
+    "options": [
+      "ד",
+      "ו",
+      "כ",
+      "ז"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 375,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ציפור'?",
+    "options": [
+      "4",
+      "5",
+      "7",
+      "6"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 376,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וקולד?",
+    "options": [
+      "ו",
+      "ב",
+      "ש",
+      "ק"
+    ],
+    "answer": "ש"
+  },
+  {
+    "id": 377,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'סוס'?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 378,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: צי_ור?",
+    "options": [
+      "ח",
+      "פ",
+      "ס",
+      "ש"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 379,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "חלב",
+      "תפוח",
+      "ציפור"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 380,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _חם?",
+    "options": [
+      "ק",
+      "ד",
+      "ח",
+      "ל"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 381,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "סוס",
+      "חתול",
+      "אריה"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 382,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי י?",
+    "options": [
+      "ל",
+      "כ",
+      "ג",
+      "ד"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 383,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "ספר",
+      "כלב",
+      "דג"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 384,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חלב",
+      "בננה",
+      "כלב",
+      "אריה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 385,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שו_חן?",
+    "options": [
+      "פ",
+      "ל",
+      "צ",
+      "ט"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 386,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ל_ם?",
+    "options": [
+      "ל",
+      "ח",
+      "ב",
+      "ה"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 387,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "ציפור",
+      "דג",
+      "אריה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 388,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ד?",
+    "options": [
+      "ל",
+      "ה",
+      "ד",
+      "ח"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 389,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי י?",
+    "options": [
+      "כ",
+      "ח",
+      "ע",
+      "ט"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 390,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _חם?",
+    "options": [
+      "נ",
+      "ו",
+      "ק",
+      "ל"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 391,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כדור",
+      "חתול",
+      "דג",
+      "כלב"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 392,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "ציפור",
+      "דג",
+      "עט"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 393,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי י?",
+    "options": [
+      "א",
+      "כ",
+      "ז",
+      "פ"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 394,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עוגה'?",
+    "options": [
+      "5",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 395,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "לחם",
+      "ציפור",
+      "דג"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 396,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כ_ב?",
+    "options": [
+      "ל",
+      "נ",
+      "א",
+      "צ"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 397,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כיסא'?",
+    "options": [
+      "6",
+      "5",
+      "3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 398,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _לב?",
+    "options": [
+      "ה",
+      "כ",
+      "ב",
+      "ר"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 399,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שוקולד'?",
+    "options": [
+      "8",
+      "6",
+      "5",
+      "7"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": 400,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "אריה",
+      "ספר",
+      "חתול"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 401,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "כדור",
+      "כלב",
+      "דג"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 402,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _יסא?",
+    "options": [
+      "ע",
+      "ח",
+      "כ",
+      "נ"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 403,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי י?",
+    "options": [
+      "מ",
+      "ע",
+      "כ",
+      "ש"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 404,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "שולחן",
+      "דג",
+      "ציפור",
+      "אריה"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 405,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "עוגה",
+      "ציפור",
+      "תפוח"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 406,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _תול?",
+    "options": [
+      "א",
+      "ח",
+      "ג",
+      "צ"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 407,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'מחברת'?",
+    "options": [
+      "7",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 408,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "ציפור",
+      "עט",
+      "חתול"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 409,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "ציפור",
+      "כיסא",
+      "כלב"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 410,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "6",
+      "7",
+      "4",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 411,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ד_?",
+    "options": [
+      "ר",
+      "ג",
+      "א",
+      "ל"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 412,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'בננה'?",
+    "options": [
+      "5",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 413,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'מחברת'?",
+    "options": [
+      "7",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 414,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ש?",
+    "options": [
+      "ט",
+      "ת",
+      "ב",
+      "ד"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 415,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וס?",
+    "options": [
+      "כ",
+      "ס",
+      "ט",
+      "א"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 416,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חתול'?",
+    "options": [
+      "4",
+      "6",
+      "3",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 417,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: בנ_ה?",
+    "options": [
+      "ד",
+      "נ",
+      "מ",
+      "ל"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 418,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "סוס",
+      "חתול",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 419,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כדור",
+      "אריה",
+      "כלב",
+      "חתול"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 420,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי א?",
+    "options": [
+      "פ",
+      "ל",
+      "ד",
+      "ב"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 421,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: לח_?",
+    "options": [
+      "ד",
+      "ם",
+      "צ",
+      "ת"
+    ],
+    "answer": "ם"
+  },
+  {
+    "id": 422,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שולח_?",
+    "options": [
+      "ן",
+      "ד",
+      "ג",
+      "ב"
+    ],
+    "answer": "ן"
+  },
+  {
+    "id": 423,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי כ?",
+    "options": [
+      "ת",
+      "ב",
+      "ח",
+      "ל"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 424,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "שולחן",
+      "דג",
+      "סוס",
+      "ציפור"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 425,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "דג",
+      "חתול",
+      "כדור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 426,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כדור",
+      "ציפור",
+      "סוס",
+      "דג"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 427,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וס?",
+    "options": [
+      "ק",
+      "צ",
+      "ס",
+      "ו"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 428,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ת_וח?",
+    "options": [
+      "ג",
+      "נ",
+      "פ",
+      "ל"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 429,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ר?",
+    "options": [
+      "כ",
+      "ש",
+      "נ",
+      "א"
+    ],
+    "answer": "ש"
+  },
+  {
+    "id": 430,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי צ?",
+    "options": [
+      "א",
+      "ח",
+      "ק",
+      "ס"
+    ],
+    "answer": "ק"
+  },
+  {
+    "id": 431,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "דג",
+      "אריה",
+      "שוקולד"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 432,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כיסא'?",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 433,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: תפו_?",
+    "options": [
+      "נ",
+      "ק",
+      "ח",
+      "ו"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 434,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שול_ן?",
+    "options": [
+      "ג",
+      "ח",
+      "ד",
+      "ת"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 435,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כיסא'?",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 436,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: מחב_ת?",
+    "options": [
+      "ר",
+      "ד",
+      "צ",
+      "ב"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 437,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: סו_?",
+    "options": [
+      "ס",
+      "פ",
+      "ר",
+      "מ"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 438,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כ_סא?",
+    "options": [
+      "ע",
+      "ש",
+      "נ",
+      "י"
+    ],
+    "answer": "י"
+  },
+  {
+    "id": 439,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: עוג_?",
+    "options": [
+      "א",
+      "נ",
+      "ה",
+      "ח"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 440,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "לחם",
+      "בננה",
+      "חתול"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 441,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "ציפור",
+      "דג",
+      "כלב"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 442,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "אריה",
+      "שוקולד",
+      "סוס"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 443,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: מח_רת?",
+    "options": [
+      "ז",
+      "י",
+      "ב",
+      "מ"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 444,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "שוקולד",
+      "חתול",
+      "בננה"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 445,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ל_ם?",
+    "options": [
+      "י",
+      "צ",
+      "ה",
+      "ח"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 446,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _יפור?",
+    "options": [
+      "ז",
+      "נ",
+      "צ",
+      "ב"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 447,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "חתול",
+      "סוס",
+      "שולחן"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 448,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "ב",
+      "ת",
+      "מ",
+      "ו"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 449,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "סוס",
+      "דג",
+      "ציפור"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 450,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "חתול",
+      "ציפור",
+      "בננה"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 451,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "חתול",
+      "לחם",
+      "סוס"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 452,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "צ",
+      "ז",
+      "א",
+      "ר"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 453,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ק?",
+    "options": [
+      "כ",
+      "ר",
+      "ה",
+      "י"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 454,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "אריה",
+      "כלב",
+      "סוס"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 455,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "כדור",
+      "אריה",
+      "כלב"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 456,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ל_ם?",
+    "options": [
+      "ג",
+      "ח",
+      "ר",
+      "ס"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 457,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "ז",
+      "ב",
+      "ס",
+      "ע"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 458,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "דג",
+      "חלב",
+      "אריה"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 459,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ש_לחן?",
+    "options": [
+      "פ",
+      "ת",
+      "ו",
+      "נ"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 460,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "חלב",
+      "כלב",
+      "ציפור"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 461,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'אריה'?",
+    "options": [
+      "4",
+      "6",
+      "3",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 462,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שוקולד'?",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "5"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": 463,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עט'?",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": 464,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ז?",
+    "options": [
+      "ו",
+      "ח",
+      "ק",
+      "נ"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 465,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "עט",
+      "ציפור",
+      "אריה"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 466,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "4",
+      "6",
+      "7",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 467,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _תול?",
+    "options": [
+      "ח",
+      "ס",
+      "ע",
+      "ה"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 468,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _ט?",
+    "options": [
+      "ז",
+      "א",
+      "ד",
+      "ע"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 469,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "ציפור",
+      "חתול",
+      "לחם",
+      "סוס"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 470,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עוגה'?",
+    "options": [
+      "6",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 471,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "סוס",
+      "אריה",
+      "חתול"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 472,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חלב",
+      "ציפור",
+      "שוקולד",
+      "אריה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 473,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "דג",
+      "בננה",
+      "כלב"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 474,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ר?",
+    "options": [
+      "ו",
+      "ש",
+      "ה",
+      "ל"
+    ],
+    "answer": "ש"
+  },
+  {
+    "id": 475,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עט'?",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": 476,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: עוג_?",
+    "options": [
+      "י",
+      "ק",
+      "צ",
+      "ה"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 477,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עוגה'?",
+    "options": [
+      "6",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 478,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: א_יה?",
+    "options": [
+      "ע",
+      "ח",
+      "ה",
+      "ר"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 479,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "דג",
+      "כלב",
+      "סוס"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 480,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _יפור?",
+    "options": [
+      "ה",
+      "צ",
+      "ת",
+      "כ"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 481,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "נ",
+      "פ",
+      "ט",
+      "ו"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 482,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "כלב",
+      "חתול",
+      "לחם",
+      "תפוח"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 483,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'אריה'?",
+    "options": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 484,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _פוח?",
+    "options": [
+      "י",
+      "ר",
+      "ת",
+      "פ"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 485,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "שוקולד",
+      "ציפור",
+      "עוגה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 486,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "ציפור",
+      "כיסא",
+      "סוס"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 487,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי מ?",
+    "options": [
+      "ס",
+      "א",
+      "ב",
+      "נ"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 488,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'תפוח'?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 489,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שולחן'?",
+    "options": [
+      "6",
+      "4",
+      "5",
+      "7"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 490,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "דג",
+      "ציפור",
+      "אריה"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 491,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "דג",
+      "סוס",
+      "כדור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 492,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "דג",
+      "חתול",
+      "כיסא"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 493,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "מחברת",
+      "אריה",
+      "חתול"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 494,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וגה?",
+    "options": [
+      "ג",
+      "מ",
+      "ל",
+      "ע"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 495,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _לב?",
+    "options": [
+      "ר",
+      "ק",
+      "ה",
+      "כ"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 496,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "עוגה",
+      "סוס",
+      "חתול",
+      "שוקולד"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 497,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "אריה",
+      "ספר",
+      "דג"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 498,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "חלב",
+      "כלב",
+      "שוקולד"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 499,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "ת",
+      "מ",
+      "י",
+      "ע"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 500,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "מחברת",
+      "חתול",
+      "אריה"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 501,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'אריה'?",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 502,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'ציפור'?",
+    "options": [
+      "7",
+      "4",
+      "6",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 503,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "ציפור",
+      "עוגה",
+      "תפוח",
+      "אריה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 504,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ע?",
+    "options": [
+      "ל",
+      "פ",
+      "ז",
+      "ד"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 505,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ה?",
+    "options": [
+      "ע",
+      "א",
+      "כ",
+      "ו"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 506,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "כיסא",
+      "כלב",
+      "דג"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 507,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: עו_ה?",
+    "options": [
+      "ח",
+      "ג",
+      "מ",
+      "ד"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 508,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "ה",
+      "ש",
+      "ט",
+      "ד"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 509,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "אריה",
+      "ציפור",
+      "חלב"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 510,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _דור?",
+    "options": [
+      "ד",
+      "כ",
+      "א",
+      "ר"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 511,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ב?",
+    "options": [
+      "כ",
+      "ע",
+      "ה",
+      "ג"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 512,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חלב'?",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 513,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "כלב",
+      "שוקולד",
+      "תפוח",
+      "ציפור"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 514,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "סוס",
+      "כדור",
+      "חתול"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 515,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "דג",
+      "ספר",
+      "סוס"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 516,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "צ",
+      "כ",
+      "ק",
+      "ו"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 517,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ע?",
+    "options": [
+      "ד",
+      "ס",
+      "פ",
+      "א"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 518,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ד_?",
+    "options": [
+      "ת",
+      "ד",
+      "ש",
+      "ג"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 519,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כי_א?",
+    "options": [
+      "נ",
+      "א",
+      "ס",
+      "מ"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 520,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חתול'?",
+    "options": [
+      "3",
+      "6",
+      "5",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 521,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ח?",
+    "options": [
+      "פ",
+      "ט",
+      "ס",
+      "ר"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 522,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "ש",
+      "ע",
+      "צ",
+      "ב"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 523,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי מ?",
+    "options": [
+      "כ",
+      "א",
+      "ו",
+      "נ"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 524,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ד_?",
+    "options": [
+      "ג",
+      "ע",
+      "צ",
+      "ל"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 525,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי י?",
+    "options": [
+      "מ",
+      "ש",
+      "ג",
+      "כ"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 526,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _ט?",
+    "options": [
+      "י",
+      "ע",
+      "ב",
+      "ק"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 527,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וס?",
+    "options": [
+      "ס",
+      "פ",
+      "ד",
+      "ה"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 528,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "שולחן",
+      "כלב",
+      "סוס"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 529,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "ספר",
+      "דג",
+      "סוס"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 530,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "ציפור",
+      "חתול",
+      "סוס",
+      "כלב"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 531,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "פ",
+      "ש",
+      "מ",
+      "ע"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 532,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "כדור",
+      "סוס",
+      "אריה"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 533,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "שולחן",
+      "ציפור",
+      "כלב",
+      "אריה"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 534,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "ר",
+      "ט",
+      "ק",
+      "ז"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 535,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'אריה'?",
+    "options": [
+      "6",
+      "5",
+      "3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 536,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ש?",
+    "options": [
+      "ת",
+      "ר",
+      "כ",
+      "ב"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 537,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ב?",
+    "options": [
+      "ג",
+      "ס",
+      "ה",
+      "ר"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 538,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ק?",
+    "options": [
+      "כ",
+      "ק",
+      "ב",
+      "ר"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 539,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ס_ס?",
+    "options": [
+      "ס",
+      "ו",
+      "ב",
+      "ש"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 540,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שו_חן?",
+    "options": [
+      "פ",
+      "ל",
+      "ב",
+      "ש"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 541,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ג?",
+    "options": [
+      "פ",
+      "ס",
+      "ז",
+      "ד"
+    ],
+    "answer": "ד"
+  },
+  {
+    "id": 542,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: לח_?",
+    "options": [
+      "ם",
+      "ג",
+      "ה",
+      "ז"
+    ],
+    "answer": "ם"
+  },
+  {
+    "id": 543,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "סוס",
+      "לחם",
+      "אריה"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 544,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ת_וח?",
+    "options": [
+      "צ",
+      "פ",
+      "ח",
+      "ט"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 545,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ח?",
+    "options": [
+      "א",
+      "ט",
+      "פ",
+      "נ"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 546,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: בנ_ה?",
+    "options": [
+      "ו",
+      "נ",
+      "ד",
+      "ק"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 547,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שוקולד'?",
+    "options": [
+      "6",
+      "5",
+      "8",
+      "7"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": 548,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "ציפור",
+      "כיסא",
+      "חתול"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 549,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "כלב",
+      "ציפור",
+      "בננה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 550,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "דג",
+      "ציפור",
+      "כלב"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 551,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "ד",
+      "ע",
+      "ל",
+      "א"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 552,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "שוקולד",
+      "סוס",
+      "חתול",
+      "לחם"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 553,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "כלב",
+      "בננה",
+      "דג"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 554,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי נ?",
+    "options": [
+      "י",
+      "ב",
+      "ס",
+      "ר"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 555,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ה?",
+    "options": [
+      "ר",
+      "ח",
+      "ג",
+      "ו"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 556,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: מ_ברת?",
+    "options": [
+      "ת",
+      "א",
+      "ח",
+      "ט"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 557,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כדור",
+      "סוס",
+      "דג",
+      "ציפור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 558,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "ציפור",
+      "סוס",
+      "שוקולד",
+      "לחם"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 559,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כדור'?",
+    "options": [
+      "4",
+      "3",
+      "6",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 560,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חלב",
+      "כלב",
+      "עוגה",
+      "סוס"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 561,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: לח_?",
+    "options": [
+      "ם",
+      "נ",
+      "י",
+      "צ"
+    ],
+    "answer": "ם"
+  },
+  {
+    "id": 562,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ת_וח?",
+    "options": [
+      "פ",
+      "ו",
+      "כ",
+      "י"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 563,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "אריה",
+      "סוס",
+      "ספר"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 564,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ח_ב?",
+    "options": [
+      "כ",
+      "ל",
+      "ח",
+      "ו"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 565,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ו?",
+    "options": [
+      "ב",
+      "ט",
+      "ז",
+      "ע"
+    ],
+    "answer": "ז"
+  },
+  {
+    "id": 566,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי מ?",
+    "options": [
+      "ש",
+      "ג",
+      "נ",
+      "ת"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 567,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ד?",
+    "options": [
+      "ה",
+      "ר",
+      "ג",
+      "ע"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 568,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "דג",
+      "אריה",
+      "תפוח"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 569,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "סוס",
+      "כדור",
+      "ציפור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 570,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "ציפור",
+      "שוקולד",
+      "תפוח"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 571,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כ_ב?",
+    "options": [
+      "צ",
+      "כ",
+      "ש",
+      "ל"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 572,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ב_נה?",
+    "options": [
+      "נ",
+      "ו",
+      "ד",
+      "ר"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 573,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "עוגה",
+      "דג",
+      "חלב"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 574,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'בננה'?",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 575,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "חתול",
+      "ציפור",
+      "אריה"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 576,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "מחברת",
+      "חתול",
+      "דג"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 577,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "דג",
+      "סוס",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 578,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כיסא'?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 579,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "כלב",
+      "מחברת",
+      "ציפור"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 580,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי י?",
+    "options": [
+      "ק",
+      "ת",
+      "כ",
+      "ו"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 581,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "כלב",
+      "חתול",
+      "לחם"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 582,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חלב",
+      "חתול",
+      "אריה",
+      "ציפור"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 583,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שוק_לד?",
+    "options": [
+      "א",
+      "ת",
+      "ר",
+      "ו"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 584,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "כלב",
+      "ציפור",
+      "סוס",
+      "עוגה"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 585,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "שולחן",
+      "ציפור",
+      "כלב",
+      "אריה"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 586,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חלב'?",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 587,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "עוגה",
+      "ציפור",
+      "אריה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 588,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "מ",
+      "ת",
+      "א",
+      "ז"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 589,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _ריה?",
+    "options": [
+      "ה",
+      "פ",
+      "ר",
+      "א"
+    ],
+    "answer": "א"
+  },
+  {
+    "id": 590,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "עוגה",
+      "שוקולד",
+      "בננה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 591,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _פר?",
+    "options": [
+      "ז",
+      "ס",
+      "ל",
+      "ג"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 592,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ד_?",
+    "options": [
+      "ג",
+      "מ",
+      "ע",
+      "ר"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 593,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ח_ב?",
+    "options": [
+      "ל",
+      "כ",
+      "פ",
+      "ת"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 594,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ב?",
+    "options": [
+      "ג",
+      "ה",
+      "ע",
+      "פ"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 595,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "ציפור",
+      "סוס",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 596,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _פוח?",
+    "options": [
+      "ב",
+      "מ",
+      "ו",
+      "ת"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 597,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ב?",
+    "options": [
+      "ב",
+      "ט",
+      "ג",
+      "ס"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 598,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי נ?",
+    "options": [
+      "ס",
+      "ג",
+      "ז",
+      "מ"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 599,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'מחברת'?",
+    "options": [
+      "7",
+      "5",
+      "6",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": 600,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ע?",
+    "options": [
+      "מ",
+      "ה",
+      "צ",
+      "פ"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 601,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "עט",
+      "סוס",
+      "ציפור"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 602,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'בננה'?",
+    "options": [
+      "6",
+      "3",
+      "5",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 603,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ד?",
+    "options": [
+      "א",
+      "ש",
+      "ה",
+      "ט"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 604,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ט?",
+    "options": [
+      "י",
+      "ש",
+      "א",
+      "ט"
+    ],
+    "answer": "י"
+  },
+  {
+    "id": 605,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'דג'?",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": 606,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ב?",
+    "options": [
+      "ג",
+      "ח",
+      "ת",
+      "ז"
+    ],
+    "answer": "ג"
+  },
+  {
+    "id": 607,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ש?",
+    "options": [
+      "ת",
+      "ד",
+      "ב",
+      "ח"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 608,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי כ?",
+    "options": [
+      "ל",
+      "צ",
+      "ט",
+      "ג"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 609,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כד_ר?",
+    "options": [
+      "ו",
+      "ד",
+      "ע",
+      "ת"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 610,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _תול?",
+    "options": [
+      "ח",
+      "צ",
+      "פ",
+      "ש"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 611,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ע?",
+    "options": [
+      "ט",
+      "פ",
+      "ד",
+      "ז"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 612,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "כלב",
+      "כדור",
+      "סוס"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 613,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'לחם'?",
+    "options": [
+      "4",
+      "5",
+      "2",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 614,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "ציפור",
+      "שוקולד",
+      "חלב"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 615,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כי_א?",
+    "options": [
+      "ס",
+      "ת",
+      "ט",
+      "י"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 616,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "כ",
+      "ה",
+      "ס",
+      "מ"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 617,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "כלב",
+      "ציפור",
+      "אריה"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 618,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "מחברת",
+      "חתול",
+      "כלב"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 619,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שולח_?",
+    "options": [
+      "ן",
+      "ב",
+      "צ",
+      "א"
+    ],
+    "answer": "ן"
+  },
+  {
+    "id": 620,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "שולחן",
+      "ציפור",
+      "כלב",
+      "אריה"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 621,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עוגה'?",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 622,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "לחם",
+      "כלב",
+      "אריה"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 623,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "חתול",
+      "סוס",
+      "כיסא"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 624,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "חתול",
+      "ציפור",
+      "אריה"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 625,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי כ?",
+    "options": [
+      "ז",
+      "ל",
+      "כ",
+      "ק"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 626,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "ר",
+      "ט",
+      "צ",
+      "ש"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 627,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כדו_?",
+    "options": [
+      "ה",
+      "י",
+      "נ",
+      "ר"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 628,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _תול?",
+    "options": [
+      "צ",
+      "ש",
+      "ח",
+      "נ"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 629,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי כ?",
+    "options": [
+      "ש",
+      "ז",
+      "ד",
+      "ל"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 630,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ז?",
+    "options": [
+      "ש",
+      "א",
+      "ל",
+      "ח"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 631,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "דג",
+      "אריה",
+      "שולחן"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 632,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "כלב",
+      "דג",
+      "חתול"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 633,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: בננ_?",
+    "options": [
+      "ה",
+      "ד",
+      "ו",
+      "ח"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 634,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _ננה?",
+    "options": [
+      "ב",
+      "צ",
+      "ס",
+      "ה"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 635,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "שוקולד",
+      "חלב",
+      "חתול"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 636,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'בננה'?",
+    "options": [
+      "5",
+      "6",
+      "3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 637,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "עוגה",
+      "לחם",
+      "שוקולד",
+      "ציפור"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 638,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _חם?",
+    "options": [
+      "ב",
+      "ע",
+      "ק",
+      "ל"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 639,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "דג",
+      "חלב",
+      "סוס",
+      "כלב"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 640,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "חתול",
+      "שוקולד",
+      "תפוח",
+      "כלב"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 641,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _פר?",
+    "options": [
+      "כ",
+      "ס",
+      "ה",
+      "ר"
+    ],
+    "answer": "ס"
+  },
+  {
+    "id": 642,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'לחם'?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 643,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _חברת?",
+    "options": [
+      "כ",
+      "מ",
+      "ה",
+      "ל"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 644,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "בננה",
+      "שוקולד",
+      "אריה",
+      "דג"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 645,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "כדור",
+      "חתול",
+      "ציפור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 646,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: חל_?",
+    "options": [
+      "ס",
+      "ט",
+      "ו",
+      "ב"
+    ],
+    "answer": "ב"
+  },
+  {
+    "id": 647,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "כלב",
+      "שולחן",
+      "ציפור",
+      "סוס"
+    ],
+    "answer": "שולחן"
+  },
+  {
+    "id": 648,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "ציפור",
+      "כיסא",
+      "אריה",
+      "סוס"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 649,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'דג'?",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": 650,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי מ?",
+    "options": [
+      "נ",
+      "ש",
+      "א",
+      "י"
+    ],
+    "answer": "נ"
+  },
+  {
+    "id": 651,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "דג",
+      "לחם",
+      "חתול"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 652,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "עוגה",
+      "ציפור",
+      "תפוח",
+      "חלב"
+    ],
+    "answer": "ציפור"
+  },
+  {
+    "id": 653,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "מחברת",
+      "אריה",
+      "חתול"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 654,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "ט",
+      "ו",
+      "ז",
+      "מ"
+    ],
+    "answer": "ט"
+  },
+  {
+    "id": 655,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חתול'?",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 656,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ס?",
+    "options": [
+      "פ",
+      "ד",
+      "ט",
+      "ע"
+    ],
+    "answer": "ע"
+  },
+  {
+    "id": 657,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עוגה'?",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 658,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "לחם",
+      "סוס",
+      "חלב",
+      "כלב"
+    ],
+    "answer": "כלב"
+  },
+  {
+    "id": 659,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _יסא?",
+    "options": [
+      "ר",
+      "ס",
+      "כ",
+      "ל"
+    ],
+    "answer": "כ"
+  },
+  {
+    "id": 660,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "סוס",
+      "דג",
+      "מחברת"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 661,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי פ?",
+    "options": [
+      "ג",
+      "ז",
+      "צ",
+      "י"
+    ],
+    "answer": "צ"
+  },
+  {
+    "id": 662,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שולח_?",
+    "options": [
+      "ע",
+      "ן",
+      "ק",
+      "פ"
+    ],
+    "answer": "ן"
+  },
+  {
+    "id": 663,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'בננה'?",
+    "options": [
+      "6",
+      "4",
+      "5",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 664,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: אר_ה?",
+    "options": [
+      "ס",
+      "פ",
+      "י",
+      "ג"
+    ],
+    "answer": "י"
+  },
+  {
+    "id": 665,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כיסא'?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 666,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "תפוח",
+      "דג",
+      "לחם",
+      "כלב"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 667,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'חלב'?",
+    "options": [
+      "4",
+      "5",
+      "2",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": 668,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "מחברת",
+      "כלב",
+      "דג"
+    ],
+    "answer": "מחברת"
+  },
+  {
+    "id": 669,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'שוקולד'?",
+    "options": [
+      "6",
+      "5",
+      "8",
+      "7"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": 670,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "אריה",
+      "עט",
+      "סוס",
+      "ציפור"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 671,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "אריה",
+      "ציפור",
+      "דג",
+      "כלב"
+    ],
+    "answer": "אריה"
+  },
+  {
+    "id": 672,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "ציפור",
+      "חתול",
+      "שוקולד",
+      "תפוח"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 673,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "כדור",
+      "אריה",
+      "סוס"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 674,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "ג",
+      "מ",
+      "נ",
+      "ד"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 675,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: צי_ור?",
+    "options": [
+      "נ",
+      "ל",
+      "ח",
+      "פ"
+    ],
+    "answer": "פ"
+  },
+  {
+    "id": 676,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "חתול",
+      "ציפור",
+      "עט",
+      "סוס"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 677,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'תפוח'?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 678,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "סוס",
+      "אריה",
+      "ציפור",
+      "כלב"
+    ],
+    "answer": "סוס"
+  },
+  {
+    "id": 679,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "ציפור",
+      "אריה",
+      "כיסא"
+    ],
+    "answer": "כיסא"
+  },
+  {
+    "id": 680,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ר?",
+    "options": [
+      "פ",
+      "ש",
+      "ז",
+      "ע"
+    ],
+    "answer": "ש"
+  },
+  {
+    "id": 681,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "ציפור",
+      "חתול",
+      "כלב"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 682,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "עט",
+      "חתול",
+      "אריה",
+      "דג"
+    ],
+    "answer": "עט"
+  },
+  {
+    "id": 683,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "אריה",
+      "כדור",
+      "ציפור"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 684,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "עוגה",
+      "לחם",
+      "תפוח",
+      "חתול"
+    ],
+    "answer": "חתול"
+  },
+  {
+    "id": 685,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'כיסא'?",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 686,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "סוס",
+      "חתול",
+      "כדור",
+      "כלב"
+    ],
+    "answer": "כדור"
+  },
+  {
+    "id": 687,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ש?",
+    "options": [
+      "ב",
+      "ז",
+      "ת",
+      "ט"
+    ],
+    "answer": "ת"
+  },
+  {
+    "id": 688,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ל?",
+    "options": [
+      "מ",
+      "ג",
+      "נ",
+      "כ"
+    ],
+    "answer": "מ"
+  },
+  {
+    "id": 689,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _וקולד?",
+    "options": [
+      "י",
+      "ס",
+      "ק",
+      "ש"
+    ],
+    "answer": "ש"
+  },
+  {
+    "id": 690,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: _תול?",
+    "options": [
+      "ג",
+      "ר",
+      "ח",
+      "ז"
+    ],
+    "answer": "ח"
+  },
+  {
+    "id": 691,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כד_ר?",
+    "options": [
+      "צ",
+      "ק",
+      "ג",
+      "ו"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 692,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: כדו_?",
+    "options": [
+      "ר",
+      "מ",
+      "ז",
+      "ש"
+    ],
+    "answer": "ר"
+  },
+  {
+    "id": 693,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ארי_?",
+    "options": [
+      "ס",
+      "ל",
+      "מ",
+      "ה"
+    ],
+    "answer": "ה"
+  },
+  {
+    "id": 694,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'אריה'?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 695,
+    "level": "easy",
+    "type": "odd_one_out",
+    "prompt": "איזו מילה שונה מהאחרות?",
+    "options": [
+      "דג",
+      "ציפור",
+      "ספר",
+      "סוס"
+    ],
+    "answer": "ספר"
+  },
+  {
+    "id": 696,
+    "level": "easy",
+    "type": "count",
+    "prompt": "כמה אותיות יש במילה 'עוגה'?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": 697,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: שוקו_ד?",
+    "options": [
+      "ג",
+      "ס",
+      "ל",
+      "ק"
+    ],
+    "answer": "ל"
+  },
+  {
+    "id": 698,
+    "level": "easy",
+    "type": "word_match",
+    "prompt": "איזו חיה מהרשימה?",
+    "options": [
+      "שוקולד",
+      "לחם",
+      "סוס",
+      "דג"
+    ],
+    "answer": "דג"
+  },
+  {
+    "id": 699,
+    "level": "easy",
+    "type": "order",
+    "prompt": "איזו אות באה אחרי ה?",
+    "options": [
+      "ב",
+      "ת",
+      "ו",
+      "ש"
+    ],
+    "answer": "ו"
+  },
+  {
+    "id": 700,
+    "level": "easy",
+    "type": "missing_letter",
+    "prompt": "איזו אות חסרה במילה: ע_?",
+    "options": [
+      "ט",
+      "ב",
+      "ת",
+      "א"
+    ],
+    "answer": "ט"
+  }
+]

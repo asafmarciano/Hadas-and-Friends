@@ -15,6 +15,30 @@ import {
   type ReactionType,
   type ReactionPayload,
 } from "../lib/reactions";
+import { riddles, type RiddleRecord } from "@/app/data/riddles";
+import { imageRiddles } from "@/app/data/imageRiddles";
+
+const allRiddles: RiddleRecord[] = [...riddles, ...imageRiddles];
+
+type ActiveQuiz = {
+  question: string;
+  choices: string[];
+  correctIndex: number;
+  image?: string;
+};
+
+function jsonRiddleToActive(raw: RiddleRecord): ActiveQuiz {
+  const choices = raw.options.map((o) => String(o).trim());
+  const ans = String(raw.answer).trim();
+  let correctIndex = choices.findIndex((c) => c === ans);
+  if (correctIndex < 0) {
+    correctIndex = choices.findIndex((c) => c.normalize("NFKC") === ans.normalize("NFKC"));
+  }
+  if (correctIndex < 0) correctIndex = 0;
+  const image =
+    typeof raw.image === "string" && raw.image.trim() !== "" ? raw.image.trim() : undefined;
+  return { question: raw.prompt, choices, correctIndex, image };
+}
 
 /** Child-friendly palette — red, orange, yellow, green, light blue, blue, purple, pink, brown, black */
 const PALETTE = [
@@ -30,43 +54,7 @@ const PALETTE = [
   "#171717",
 ] as const;
 
-type Phase = "paint" | "quiz" | "complete";
-
-type LevelDef = {
-  id: string;
-  quiz: {
-    question: string;
-    choices: [string, string, string];
-    correctIndex: 0 | 1 | 2;
-  };
-};
-
-const LEVELS: LevelDef[] = [
-  {
-    id: "tree",
-    quiz: {
-      question: "באיזו אות מתחילה המילה עץ?",
-      choices: ["א", "ע", "ט"],
-      correctIndex: 1,
-    },
-  },
-  {
-    id: "house",
-    quiz: {
-      question: "באיזו אות מתחילה המילה בית?",
-      choices: ["ב", "ד", "ל"],
-      correctIndex: 0,
-    },
-  },
-];
-
-function pickColoringFilename(filenames: string[], previous: string | null): string | null {
-  if (filenames.length === 0) return null;
-  if (filenames.length === 1) return filenames[0];
-  const pool = previous !== null ? filenames.filter((f) => f !== previous) : filenames;
-  const choices = pool.length > 0 ? pool : filenames;
-  return choices[Math.floor(Math.random() * choices.length)] ?? null;
-}
+type Phase = "paint" | "quiz";
 
 function applyCanvasPixelSize(canvas: HTMLCanvasElement, cssWidth: number, cssHeight: number) {
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -92,6 +80,7 @@ export default function GamePage() {
   const [phase, setPhase] = useState<Phase>("paint");
   const [quizCorrect, setQuizCorrect] = useState(false);
   const [quizWrong, setQuizWrong] = useState(false);
+  const [activeQuiz, setActiveQuiz] = useState<ActiveQuiz | null>(null);
   const [notifications, setNotifications] = useState<{ id: string; message: string; type: ReactionType }[]>([]);
 
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -106,7 +95,64 @@ export default function GamePage() {
   const [coloringFilenames, setColoringFilenames] = useState<string[]>([]);
   const [coloringImageUrl, setColoringImageUrl] = useState<string | null>(null);
   const [coloringListReady, setColoringListReady] = useState(false);
-  const prevColoringFilenameRef = useRef<string | null>(null);
+  const recentColoringFilenamesRef = useRef<string[]>([]);
+  const lastColoringFilenameRef = useRef<string | null>(null);
+  const recentRiddleIndexRef = useRef<number[]>([]);
+  const lastRiddleIndexRef = useRef<number | null>(null);
+
+  const pickColoringFilenameSmart = useCallback((filenames: string[]): string | null => {
+    if (filenames.length === 0) return null;
+    if (filenames.length === 1) {
+      const only = filenames[0]!;
+      recentColoringFilenamesRef.current = [...recentColoringFilenamesRef.current, only].slice(-5);
+      lastColoringFilenameRef.current = only;
+      return only;
+    }
+    const last5 = recentColoringFilenamesRef.current;
+    const lastFn = lastColoringFilenameRef.current;
+    let candidates = filenames.filter((f) => f !== lastFn && !last5.includes(f));
+    if (candidates.length === 0) {
+      candidates = filenames.filter((f) => f !== lastFn);
+    }
+    if (candidates.length === 0) {
+      const fallback = lastFn ?? filenames[0]!;
+      recentColoringFilenamesRef.current = [...recentColoringFilenamesRef.current, fallback].slice(-5);
+      lastColoringFilenameRef.current = fallback;
+      return fallback;
+    }
+    const picked = candidates[Math.floor(Math.random() * candidates.length)]!;
+    recentColoringFilenamesRef.current = [...recentColoringFilenamesRef.current, picked].slice(-5);
+    lastColoringFilenameRef.current = picked;
+    return picked;
+  }, []);
+
+  const pickRandomActiveQuiz = useCallback((): ActiveQuiz => {
+    const n = allRiddles.length;
+    if (n === 0) {
+      return {
+        question: "",
+        choices: [""],
+        correctIndex: 0,
+      };
+    }
+    const last5 = recentRiddleIndexRef.current;
+    const lastIdx = lastRiddleIndexRef.current;
+    const indices = allRiddles.map((_, i) => i);
+    let candidates = indices.filter((i) => i !== lastIdx && !last5.includes(i));
+    if (candidates.length === 0) {
+      candidates = indices.filter((i) => i !== lastIdx);
+    }
+    if (candidates.length === 0) {
+      const picked = indices[0]!;
+      recentRiddleIndexRef.current = [...recentRiddleIndexRef.current, picked].slice(-5);
+      lastRiddleIndexRef.current = picked;
+      return jsonRiddleToActive(allRiddles[picked]!);
+    }
+    const picked = candidates[Math.floor(Math.random() * candidates.length)]!;
+    recentRiddleIndexRef.current = [...recentRiddleIndexRef.current, picked].slice(-5);
+    lastRiddleIndexRef.current = picked;
+    return jsonRiddleToActive(allRiddles[picked]!);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -134,14 +180,13 @@ export default function GamePage() {
       setColoringImageUrl(null);
       return;
     }
-    const chosen = pickColoringFilename(coloringFilenames, prevColoringFilenameRef.current);
+    const chosen = pickColoringFilenameSmart(coloringFilenames);
     if (chosen === null) {
       setColoringImageUrl(null);
       return;
     }
-    prevColoringFilenameRef.current = chosen;
     setColoringImageUrl(`/coloring/${encodeURIComponent(chosen)}`);
-  }, [levelIndex, coloringFilenames, coloringListReady]);
+  }, [levelIndex, coloringFilenames, coloringListReady, pickColoringFilenameSmart]);
 
   useEffect(() => {
     setMounted(true);
@@ -365,15 +410,15 @@ export default function GamePage() {
   );
 
   const handleFinishDrawing = () => {
+    setActiveQuiz(pickRandomActiveQuiz());
     setPhase("quiz");
     setQuizCorrect(false);
     setQuizWrong(false);
   };
 
   const handleQuizPick = (choiceIndex: number) => {
-    const level = LEVELS[levelIndex];
-    if (!level) return;
-    if (choiceIndex === level.quiz.correctIndex) {
+    if (!activeQuiz) return;
+    if (choiceIndex === activeQuiz.correctIndex) {
       setQuizCorrect(true);
       setQuizWrong(false);
     } else {
@@ -382,19 +427,15 @@ export default function GamePage() {
   };
 
   const handleNextLevel = () => {
-    if (levelIndex < LEVELS.length - 1) {
-      setLevelIndex((i) => i + 1);
-      setPhase("paint");
-      setQuizCorrect(false);
-      setQuizWrong(false);
-      setSelectedColor(PALETTE[0]);
-      setIsEraser(false);
-    } else {
-      setPhase("complete");
-    }
+    setLevelIndex((i) => i + 1);
+    setPhase("paint");
+    setActiveQuiz(null);
+    setQuizCorrect(false);
+    setQuizWrong(false);
+    setSelectedColor(PALETTE[0]);
+    setIsEraser(false);
   };
 
-  const level = LEVELS[levelIndex];
 
   if (!mounted || !girl) {
     return (
@@ -422,19 +463,7 @@ export default function GamePage() {
         mainClassName={phase === "quiz" ? "pointer-events-none" : undefined}
         showGalleryLink={false}
       >
-        {phase === "complete" ? (
-          <div className="rounded-2xl border-2 border-emerald-200 bg-emerald-50/90 shadow-xl p-5 sm:p-6 text-center space-y-3 flex flex-col justify-center w-full max-w-lg">
-            <p className="text-xl sm:text-2xl font-bold text-emerald-800 leading-snug">כל הכבוד! סיימת את כל השלבים! 🌟</p>
-            <button
-              type="button"
-              onClick={() => router.push("/choose")}
-              className="rounded-2xl bg-violet-500 px-6 py-2.5 text-base sm:text-lg font-bold text-white hover:bg-violet-600"
-            >
-              חזרה לבחירת מצב
-            </button>
-          </div>
-        ) : (
-            <div className="w-full max-w-4xl flex flex-col flex-1 min-h-0 gap-1">
+        <div className="w-full max-w-4xl flex flex-col flex-1 min-h-0 gap-1">
               <div className="rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 shadow-md shadow-violet-200/30 ring-1 ring-white/80 p-1.5 sm:p-2 flex flex-col flex-1 min-h-0 gap-1.5">
                 {/* Full-area drawable canvas; line art centered underneath */}
                 <div className="relative flex-1 min-h-0 rounded-xl overflow-hidden ring-2 ring-violet-100/90 shadow-inner bg-white/60">
@@ -552,10 +581,9 @@ export default function GamePage() {
                 )}
               </div>
             </div>
-        )}
       </DrawingSessionShell>
 
-      {phase === "quiz" && level && (
+      {phase === "quiz" && activeQuiz && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/50 backdrop-blur-[3px] pointer-events-auto overflow-y-auto"
           role="dialog"
@@ -566,9 +594,18 @@ export default function GamePage() {
             <p id="game-quiz-title" className="text-xl sm:text-2xl font-extrabold text-emerald-600 drop-shadow-sm">
               כל הכבוד! 🌟
             </p>
-            <p className="text-lg sm:text-xl font-bold text-gray-900 leading-snug">{level.quiz.question}</p>
+            {activeQuiz.image ? (
+              <div
+                className="text-7xl sm:text-8xl leading-none py-1 select-none"
+                aria-hidden
+                role="img"
+              >
+                {activeQuiz.image}
+              </div>
+            ) : null}
+            <p className="text-lg sm:text-xl font-bold text-gray-900 leading-snug">{activeQuiz.question}</p>
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 pt-0.5">
-              {level.quiz.choices.map((choice, idx) => (
+              {activeQuiz.choices.map((choice, idx) => (
                 <button
                   key={idx}
                   type="button"
@@ -589,7 +626,7 @@ export default function GamePage() {
                 onClick={handleNextLevel}
                 className="w-full rounded-2xl bg-gradient-to-r from-violet-500 to-fuchsia-500 py-3 text-lg sm:text-xl font-bold text-white shadow-lg hover:from-violet-600 hover:to-fuchsia-600 touch-manipulation"
               >
-                {levelIndex < LEVELS.length - 1 ? "הבא" : "סיום"}
+                הבא
               </button>
             )}
           </div>

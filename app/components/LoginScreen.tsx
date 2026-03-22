@@ -229,7 +229,7 @@ export function LoginScreen() {
         <AvatarPicker
           displayName={avatarStepName}
           subtitle="אחרי הקוד — עכשיו בוחרים איך נראה הפרופיל"
-          continueLabel="המשך לבחירת מצב"
+          continueLabel="מה בא לך לעשות?"
           urlsOverride={avatarUrlsOverride}
           initialSelectedUrl={null}
           onBack={handleBackFromAvatars}

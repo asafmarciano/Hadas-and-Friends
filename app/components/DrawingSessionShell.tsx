@@ -85,7 +85,7 @@ export function DrawingSessionShell({
             onClick={() => router.push("/choose")}
             className="rounded-2xl border-2 border-pink-300 bg-pink-100 px-4 py-2.5 text-base font-bold text-pink-900 hover:bg-pink-200 hover:border-pink-400 shrink-0 shadow-sm"
           >
-            🔙 חזרה לבחירת מצב
+            🔙 לבחור משהו אחר
           </button>
           <OnlineGirlsList currentUserId={girl.id} onSendReaction={onSendReaction} />
           {showGalleryLink ? (

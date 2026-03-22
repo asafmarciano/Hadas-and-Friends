@@ -82,8 +82,7 @@ export default function ChooseModePage() {
 
       <section className="flex-1 flex flex-col items-center justify-center px-4 pb-10 w-full max-w-lg mx-auto gap-8">
         <header className="text-center space-y-2">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">בחרי מצב</h1>
-          <p className="text-lg text-gray-700">מה נעשה היום?</p>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">מה בא לך לעשות?</h1>
         </header>
         <div className="flex flex-col gap-5 w-full">
           <button
@@ -109,7 +108,7 @@ export default function ChooseModePage() {
               aria-hidden
             />
             <span className="relative z-10 text-3xl sm:text-4xl font-bold text-gray-900">
-              משחק צביעה 🎮
+              משחק צבעים 🎮
             </span>
           </button>
         </div>
