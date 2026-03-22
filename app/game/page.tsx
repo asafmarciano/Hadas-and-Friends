@@ -439,7 +439,7 @@ export default function GamePage() {
 
   if (!mounted || !girl) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
+      <main className="flex h-dvh max-h-dvh min-h-0 items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-violet-50 to-sky-50" dir="rtl">
         <p className="text-xl text-gray-700">טוען...</p>
       </main>
     );

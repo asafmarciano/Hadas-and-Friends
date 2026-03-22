@@ -12,7 +12,7 @@ interface DrawingToolbarProps {
   onEraserToggle: () => void;
   onClear: () => void;
   onSave: () => void;
-  /** /draw mobile: same strip + primary CTA pattern as /game */
+  /** /draw: same card-in-card strips + CTA as /game (all breakpoints) */
   gameMobileLayout?: boolean;
 }
 
@@ -72,56 +72,44 @@ export function DrawingToolbar({
     "min-h-[32px] px-1.5 py-0.5 text-[0.65rem] sm:min-h-[36px] sm:px-2 sm:py-1 sm:text-xs rounded-md border font-bold touch-manipulation sm:rounded-lg";
 
   return (
-    <div
-      className={
-        "w-full min-w-0 max-w-full max-sm:min-w-0 sm:max-w-3xl flex flex-col shrink-0 box-border max-sm:gap-1 sm:gap-3 " +
-        "sm:rounded-3xl sm:border-2 sm:border-white sm:bg-white/80 sm:shadow-lg sm:px-3 sm:py-3"
-      }
-    >
-      <div className="flex flex-col gap-1.5 sm:hidden w-full">
-        <div className="rounded-lg border border-violet-100/70 bg-white/60 px-1 py-0.5 shadow-sm">
-          <ColorPalette
-            selectedColor={selectedColor}
-            onSelectColor={onSelectColor}
-            gameMobileGrid
-          />
-        </div>
-        <div className="rounded-lg border border-sky-100/80 bg-gradient-to-r from-sky-50/70 to-violet-50/50 px-1 py-0.5 shadow-sm">
-          <div className="flex flex-wrap items-center justify-center gap-0.5">
-            <BrushSizePicker selectedSize={brushSize} onSelectSize={onBrushSizeChange} gameMobile />
-            <button
-              type="button"
-              onClick={onEraserToggle}
-              className={`${gameSkyBtn} ${
-                isEraser
-                  ? "bg-amber-200 border-amber-500 text-amber-950"
-                  : "bg-white border-amber-200 text-amber-900 hover:bg-amber-50"
-              }`}
-            >
-              🧽 מחק
-            </button>
-            <button
-              type="button"
-              onClick={onClear}
-              className={`${gameSkyBtn} border-red-200 bg-red-50 text-red-800 hover:bg-red-100`}
-            >
-              🗑️ נקה
-            </button>
-          </div>
-        </div>
-        <button
-          type="button"
-          onClick={onSave}
-          className="w-full rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 py-1.5 text-sm font-bold text-white shadow-md ring-1 ring-white/40 hover:from-emerald-600 hover:to-teal-600 sm:rounded-xl sm:py-2 sm:text-base"
-        >
-          💾 שמרו לגלריה
-        </button>
+    <div className="flex w-full min-w-0 shrink-0 flex-col gap-1 max-sm:gap-1.5 sm:gap-1.5">
+      <div className="shrink-0 rounded-lg border border-violet-100/70 bg-white/60 px-1 py-0.5 shadow-sm sm:rounded-xl sm:px-1.5 sm:py-1">
+        <ColorPalette
+          selectedColor={selectedColor}
+          onSelectColor={onSelectColor}
+          gameMobileGrid
+        />
       </div>
-
-      <div className="hidden sm:flex sm:flex-col sm:gap-3 w-full">
-        <ColorPalette selectedColor={selectedColor} onSelectColor={onSelectColor} />
-        {desktopRow}
+      <div className="shrink-0 rounded-lg border border-sky-100/80 bg-gradient-to-r from-sky-50/70 to-violet-50/50 px-1 py-0.5 shadow-sm sm:rounded-xl sm:px-1.5 sm:py-1">
+        <div className="flex flex-wrap items-center justify-center gap-0.5 sm:gap-1.5">
+          <BrushSizePicker selectedSize={brushSize} onSelectSize={onBrushSizeChange} gameMobile />
+          <button
+            type="button"
+            onClick={onEraserToggle}
+            className={`${gameSkyBtn} ${
+              isEraser
+                ? "bg-amber-200 border-amber-500 text-amber-950"
+                : "bg-white border-amber-200 text-amber-900 hover:bg-amber-50"
+            }`}
+          >
+            🧽 מחק
+          </button>
+          <button
+            type="button"
+            onClick={onClear}
+            className={`${gameSkyBtn} border-red-200 bg-red-50 text-red-800 hover:bg-red-100`}
+          >
+            🗑️ נקה
+          </button>
+        </div>
       </div>
+      <button
+        type="button"
+        onClick={onSave}
+        className="w-full shrink-0 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 py-1.5 text-sm font-bold text-white shadow-md ring-1 ring-white/40 hover:from-emerald-600 hover:to-teal-600 sm:rounded-xl sm:py-2 sm:text-base"
+      >
+        💾 שמרו לגלריה
+      </button>
     </div>
   );
 }
