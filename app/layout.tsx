@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "אפליקציית ציור פרטית לילדים",
     images: [
       {
-        url: "/og-image1.jpg",
+        url: "https://hadas-and-friends.netlify.app/og-image1.jpg",
         width: 1200,
         height: 630,
       },
