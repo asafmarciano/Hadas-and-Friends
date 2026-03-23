@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getCurrentGirl, logoutGirl, useSessionAvatarHydration } from "../lib/auth";
 import { BRUSH_SIZES } from "../components/BrushSizePicker";
@@ -19,6 +19,8 @@ import { riddles, type RiddleRecord } from "@/app/data/riddles";
 import { imageRiddles } from "@/app/data/imageRiddles";
 import { GAME_DRAW_PALETTE as PALETTE } from "@/app/lib/gameDrawPalette";
 import { GamePaintPaletteStrip } from "@/app/components/GamePaintPaletteStrip";
+import { AliveCelebration } from "@/app/components/AliveCelebration";
+import { getAlivePresetForColoringUrl } from "@/app/lib/coloringAlivePreset";
 
 const allRiddles: RiddleRecord[] = [...riddles, ...imageRiddles];
 
@@ -48,14 +50,61 @@ function applyCanvasPixelSize(canvas: HTMLCanvasElement, cssWidth: number, cssHe
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
   const w = Math.max(1, Math.floor(cssWidth));
   const h = Math.max(1, Math.floor(cssHeight));
-  canvas.width = Math.floor(w * dpr);
-  canvas.height = Math.floor(h * dpr);
+  const pw = Math.floor(w * dpr);
+  const ph = Math.floor(h * dpr);
+  if (canvas.width === pw && canvas.height === ph) {
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return null;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return ctx;
+  }
+  canvas.width = pw;
+  canvas.height = ph;
   canvas.style.width = `${w}px`;
   canvas.style.height = `${h}px`;
   const ctx = canvas.getContext("2d");
   if (!ctx) return null;
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   return ctx;
+}
+
+/**
+ * Match canvas backing store to wrap size without clearing when dimensions are unchanged.
+ * When the wrap actually grows/shrinks, scale the existing bitmap so paint survives layout changes
+ * (e.g. hiding the toolbar when "Done" runs triggers ResizeObserver).
+ */
+function resizeCanvasToWrapPreservingDrawing(canvas: HTMLCanvasElement, cssWidth: number, cssHeight: number) {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const w = Math.max(1, Math.floor(cssWidth));
+  const h = Math.max(1, Math.floor(cssHeight));
+  const newPw = Math.floor(w * dpr);
+  const newPh = Math.floor(h * dpr);
+  if (canvas.width === newPw && canvas.height === newPh) {
+    const ctx = canvas.getContext("2d");
+    if (ctx) ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return;
+  }
+
+  const temp = document.createElement("canvas");
+  temp.width = canvas.width;
+  temp.height = canvas.height;
+  const tctx = temp.getContext("2d");
+  if (tctx && canvas.width > 0 && canvas.height > 0) {
+    tctx.drawImage(canvas, 0, 0);
+  }
+
+  canvas.width = newPw;
+  canvas.height = newPh;
+  canvas.style.width = `${w}px`;
+  canvas.style.height = `${h}px`;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  if (temp.width > 0 && temp.height > 0) {
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(temp, 0, 0, temp.width, temp.height, 0, 0, w, h);
+  }
 }
 
 export default function GamePage() {
@@ -70,6 +119,8 @@ export default function GamePage() {
   const [quizWrong, setQuizWrong] = useState(false);
   const [activeQuiz, setActiveQuiz] = useState<ActiveQuiz | null>(null);
   const [notifications, setNotifications] = useState<{ id: string; message: string; type: ReactionType }[]>([]);
+  const [showMagic, setShowMagic] = useState(false);
+  const [magicKey, setMagicKey] = useState(0);
 
   const wrapRef = useRef<HTMLDivElement>(null);
   const drawCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -87,6 +138,8 @@ export default function GamePage() {
   const lastColoringFilenameRef = useRef<string | null>(null);
   const recentRiddleIndexRef = useRef<number[]>([]);
   const lastRiddleIndexRef = useRef<number | null>(null);
+
+  const alivePreset = useMemo(() => getAlivePresetForColoringUrl(coloringImageUrl), [coloringImageUrl]);
 
   const pickColoringFilenameSmart = useCallback((filenames: string[]): string | null => {
     if (filenames.length === 0) return null;
@@ -252,7 +305,8 @@ export default function GamePage() {
     setCanUndo(false);
   }, []);
 
-  const resizeCanvasToWrap = useCallback(() => {
+  /** New coloring sheet / level: size to wrap and clear (intentional reset). */
+  const resizeCanvasToWrapFresh = useCallback(() => {
     const wrap = wrapRef.current;
     const canvas = drawCanvasRef.current;
     if (!wrap || !canvas) return;
@@ -262,25 +316,44 @@ export default function GamePage() {
     applyCanvasPixelSize(canvas, w, h);
   }, []);
 
+  /** Layout-only resize: keep pixels (toolbar show/hide must not wipe the drawing). */
+  const resizeCanvasToWrapPreservePaint = useCallback(() => {
+    const wrap = wrapRef.current;
+    const canvas = drawCanvasRef.current;
+    if (!wrap || !canvas) return;
+    const w = wrap.clientWidth;
+    const h = wrap.clientHeight;
+    if (w < 2 || h < 2) return;
+    resizeCanvasToWrapPreservingDrawing(canvas, w, h);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    try {
+      undoStackRef.current = [ctx.getImageData(0, 0, canvas.width, canvas.height)];
+      setCanUndo(false);
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
   useEffect(() => {
     if (!girlId) return;
     const wrap = wrapRef.current;
     if (!wrap) return;
-    const sync = () => {
-      resizeCanvasToWrap();
+    const syncNewSheet = () => {
+      resizeCanvasToWrapFresh();
       resetUndoToEmpty();
     };
-    sync();
+    syncNewSheet();
     const ro = new ResizeObserver(() => {
-      sync();
+      resizeCanvasToWrapPreservePaint();
     });
     ro.observe(wrap);
-    const id = requestAnimationFrame(() => sync());
+    const id = requestAnimationFrame(() => resizeCanvasToWrapPreservePaint());
     return () => {
       cancelAnimationFrame(id);
       ro.disconnect();
     };
-  }, [girlId, levelIndex, coloringImageUrl, resizeCanvasToWrap, resetUndoToEmpty]);
+  }, [girlId, levelIndex, coloringImageUrl, resizeCanvasToWrapFresh, resizeCanvasToWrapPreservePaint, resetUndoToEmpty]);
 
   /** Pointer → canvas CSS pixels (matches ctx after setTransform(dpr)) */
   const getCanvasCoords = useCallback((clientX: number, clientY: number) => {
@@ -397,11 +470,17 @@ export default function GamePage() {
     [commitUndoSnapshot, endStroke],
   );
 
+  const finishMagicAndOpenQuiz = useCallback(() => {
+    setShowMagic(false);
+    setPhase("quiz");
+  }, []);
+
   const handleFinishDrawing = () => {
     setActiveQuiz(pickRandomActiveQuiz());
-    setPhase("quiz");
     setQuizCorrect(false);
     setQuizWrong(false);
+    setMagicKey((k) => k + 1);
+    setShowMagic(true);
   };
 
   const handleQuizPick = (choiceIndex: number) => {
@@ -422,6 +501,7 @@ export default function GamePage() {
     setQuizWrong(false);
     setSelectedColor(PALETTE[0]);
     setIsEraser(false);
+    setShowMagic(false);
   };
 
 
@@ -455,40 +535,67 @@ export default function GamePage() {
               <div className="grid min-h-0 w-full flex-1 grid-rows-[minmax(0,1fr)_auto] gap-1.5 rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 p-1.5 max-sm:gap-1 max-sm:p-1 shadow-md shadow-violet-200/30 ring-1 ring-white/80 sm:gap-3 sm:p-2">
                 <div className="flex h-full min-h-0 min-w-0 w-full items-stretch justify-center max-sm:justify-center sm:justify-start">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl ring-2 ring-violet-100/90 max-sm:h-full max-sm:max-h-full max-sm:w-auto max-sm:max-w-full max-sm:shrink-0 sm:h-auto sm:w-full sm:max-h-full sm:min-h-0 sm:self-start">
-                    <div ref={wrapRef} className="absolute inset-0 h-full w-full min-h-0">
-                      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none bg-neutral-100 p-0.5">
-                        {!coloringListReady ? (
+                    <div
+                      ref={wrapRef}
+                      className={
+                        "absolute inset-0 h-full w-full min-h-0" +
+                        (showMagic ? ` alive-drawing alive-drawing--${alivePreset}` : "")
+                      }
+                    >
+                      {/* Base paper — paint canvas sits above; line-art is duplicated on top (see below) */}
+                      <div className="pointer-events-none absolute inset-0 z-0 bg-neutral-100 p-0.5" />
+                      {!coloringListReady ? (
+                        <div className="absolute inset-0 z-[5] flex items-center justify-center p-0.5">
                           <span className="text-sm font-medium text-gray-400">טוען תמונה…</span>
-                        ) : coloringImageUrl ? (
+                        </div>
+                      ) : null}
+                      {!coloringListReady || !coloringImageUrl ? null : (
+                        <>
+                          {/* Color layer: under the outlines so black contours stay visible */}
+                          <canvas
+                            ref={drawCanvasRef}
+                            className={`absolute inset-0 z-10 h-full w-full touch-none ${
+                              phase === "paint" && !showMagic
+                                ? isEraser
+                                  ? "cursor-cell"
+                                  : "cursor-crosshair"
+                                : "cursor-default pointer-events-none"
+                            }`}
+                            onPointerDown={onPointerDown}
+                            onPointerMove={onPointerMove}
+                            onPointerUp={onPointerUp}
+                            onPointerCancel={onPointerUp}
+                          />
+                          {/* Line-art on top: multiply so white paper areas show paint underneath; black lines stay dark */}
                           <img
                             key={coloringImageUrl}
                             src={coloringImageUrl}
                             alt=""
-                            className="h-full max-h-full w-auto max-w-full object-contain pointer-events-none select-none"
+                            className="pointer-events-none absolute left-1/2 top-1/2 z-20 max-h-full max-w-full -translate-x-1/2 -translate-y-1/2 object-contain select-none mix-blend-multiply"
                             draggable={false}
                           />
-                        ) : (
+                        </>
+                      )}
+                      {coloringListReady && !coloringImageUrl ? (
+                        <div className="absolute inset-0 z-[5] flex items-center justify-center p-0.5">
                           <span className="text-sm font-medium text-gray-400 text-center px-2">
                             אין תמונות זמינות
                           </span>
-                        )}
-                      </div>
-                      <canvas
-                        ref={drawCanvasRef}
-                        className={`absolute inset-0 z-10 h-full w-full touch-none ${
-                          phase === "paint" ? (isEraser ? "cursor-cell" : "cursor-crosshair") : "cursor-default pointer-events-none"
-                        }`}
-                        onPointerDown={onPointerDown}
-                        onPointerMove={onPointerMove}
-                        onPointerUp={onPointerUp}
-                        onPointerCancel={onPointerUp}
-                      />
+                        </div>
+                      ) : null}
+                      {showMagic ? (
+                        <AliveCelebration
+                          key={magicKey}
+                          preset={alivePreset}
+                          onComplete={finishMagicAndOpenQuiz}
+                        />
+                      ) : null}
                     </div>
                   </div>
                 </div>
 
                 <div className="min-w-0">
-                {phase === "paint" && (
+                {phase === "paint" && !showMagic && (
                   <>
                     <GamePaintPaletteStrip
                       selectedColor={selectedColor}
