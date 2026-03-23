@@ -5,6 +5,7 @@ import type { AlivePresetId } from "@/app/lib/coloringAlivePreset";
 
 type AliveCelebrationProps = {
   preset: AlivePresetId;
+  girl: { name: string; avatar_url: string | null };
   onComplete: () => void;
 };
 
@@ -15,11 +16,12 @@ export const ALIVE_CELEBRATION_MS = 2800;
  * Themed “picture came to life” accents (bubbles, glow, etc.).
  * Mount inside the drawing stack so it moves with the animated container; pointer-events none.
  */
-export function AliveCelebration({ preset, onComplete }: AliveCelebrationProps) {
+export function AliveCelebration({ preset, girl, onComplete }: AliveCelebrationProps) {
   useEffect(() => {
     const t = window.setTimeout(onComplete, ALIVE_CELEBRATION_MS);
     return () => window.clearTimeout(t);
   }, [onComplete]);
+  const avatarInitial = girl.name.trim().charAt(0) || "👧";
 
   return (
     <div
@@ -85,6 +87,25 @@ export function AliveCelebration({ preset, onComplete }: AliveCelebrationProps) 
           </span>
         </>
       ) : null}
+
+      <div className="absolute right-[6%] top-[6%] z-[30] flex max-w-[74%] items-start gap-2">
+        <div className="alive-avatar-wrap relative shrink-0 rounded-full bg-gradient-to-br from-pink-300 via-violet-300 to-sky-300 p-[3px] shadow-[0_8px_24px_rgba(139,92,246,0.35)]">
+          {girl.avatar_url ? (
+            <img
+              src={girl.avatar_url}
+              alt={`האוואטר של ${girl.name}`}
+              className="alive-avatar-bob h-16 w-16 rounded-full border-[3px] border-white object-cover sm:h-20 sm:w-20"
+            />
+          ) : (
+            <div className="alive-avatar-bob flex h-16 w-16 items-center justify-center rounded-full border-[3px] border-white bg-gradient-to-br from-violet-100 to-pink-100 text-2xl font-black text-violet-700 sm:h-20 sm:w-20 sm:text-3xl">
+              {avatarInitial}
+            </div>
+          )}
+        </div>
+        <div className="alive-cheer-bubble mt-1 rounded-2xl border border-white/90 bg-white/92 px-3 py-1.5 text-right shadow-md backdrop-blur-[1px]">
+          <p className="text-sm font-extrabold leading-tight text-violet-900 sm:text-base">כל הכבוד!!</p>
+        </div>
+      </div>
     </div>
   );
 }

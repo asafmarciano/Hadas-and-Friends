@@ -138,7 +138,6 @@ export default function GamePage() {
   const lastColoringFilenameRef = useRef<string | null>(null);
   const recentRiddleIndexRef = useRef<number[]>([]);
   const lastRiddleIndexRef = useRef<number | null>(null);
-
   const alivePreset = useMemo(() => getAlivePresetForColoringUrl(coloringImageUrl), [coloringImageUrl]);
 
   const pickColoringFilenameSmart = useCallback((filenames: string[]): string | null => {
@@ -533,8 +532,8 @@ export default function GamePage() {
       >
         <div className="flex h-full min-h-0 w-full min-w-0 max-w-4xl flex-1 flex-col gap-1 sm:mx-auto sm:gap-2">
               <div className="grid min-h-0 w-full flex-1 grid-rows-[minmax(0,1fr)_auto] gap-1.5 rounded-[1.15rem] border-2 border-violet-200/90 bg-gradient-to-b from-white via-fuchsia-50/30 to-violet-50/40 p-1.5 max-sm:gap-1 max-sm:p-1 shadow-md shadow-violet-200/30 ring-1 ring-white/80 sm:gap-3 sm:p-2">
-                <div className="flex h-full min-h-0 min-w-0 w-full items-stretch justify-center max-sm:justify-center sm:justify-start">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl ring-2 ring-violet-100/90 max-sm:h-full max-sm:max-h-full max-sm:w-auto max-sm:max-w-full max-sm:shrink-0 sm:h-auto sm:w-full sm:max-h-full sm:min-h-0 sm:self-start">
+                <div className="flex h-full min-h-0 min-w-0 w-full items-stretch justify-center max-sm:justify-center sm:justify-start md:max-lg:justify-center">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl ring-2 ring-violet-100/90 max-sm:h-full max-sm:max-h-full max-sm:w-auto max-sm:max-w-full max-sm:shrink-0 sm:h-auto sm:w-full sm:max-h-full sm:min-h-0 sm:self-start md:max-lg:h-full md:max-lg:w-auto md:max-lg:max-w-full md:max-lg:self-center">
                     <div
                       ref={wrapRef}
                       className={
@@ -587,6 +586,7 @@ export default function GamePage() {
                         <AliveCelebration
                           key={magicKey}
                           preset={alivePreset}
+                          girl={girl}
                           onComplete={finishMagicAndOpenQuiz}
                         />
                       ) : null}

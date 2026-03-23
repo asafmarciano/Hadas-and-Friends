@@ -23,6 +23,7 @@ export default function ChooseModePage() {
   }, [mounted, router]);
 
   const girl = mounted ? getCurrentGirl() : null;
+  const avatarInitial = girl?.name?.trim()?.charAt(0) || "👧";
 
   const handleLogout = async () => {
     if (!girl) return;
@@ -81,8 +82,33 @@ export default function ChooseModePage() {
       </div>
 
       <section className="flex-1 flex flex-col items-center justify-center px-3 sm:px-4 pb-6 sm:pb-10 w-full max-w-md sm:max-w-lg mx-auto gap-4 sm:gap-8">
-        <header className="text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">מה בא לכם לעשות?</h1>
+        <header className="w-full text-center space-y-2 sm:space-y-3">
+          <div className="mx-auto relative w-fit">
+            <div
+              className="absolute inset-0 rounded-full bg-gradient-to-br from-pink-300/45 via-violet-300/40 to-sky-300/45 blur-md scale-110"
+              aria-hidden
+            />
+            <div className="relative rounded-full p-[5px] bg-gradient-to-br from-pink-300 via-violet-300 to-sky-300 shadow-[0_10px_35px_rgba(139,92,246,0.28)]">
+              {girl.avatar_url ? (
+                <img
+                  src={girl.avatar_url}
+                  alt={`האוואטר של ${girl.name}`}
+                  className="h-24 w-24 sm:h-28 sm:w-28 rounded-full object-cover border-4 border-white motion-safe:animate-pulse"
+                />
+              ) : (
+                <div className="h-24 w-24 sm:h-28 sm:w-28 rounded-full border-4 border-white bg-gradient-to-br from-violet-100 to-pink-100 flex items-center justify-center text-4xl sm:text-5xl font-black text-violet-700 motion-safe:animate-pulse">
+                  {avatarInitial}
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="space-y-0.5 sm:space-y-1">
+            <p className="text-lg sm:text-xl font-bold text-violet-900">{girl.name}</p>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+              מה תרצי לעשות עכשיו?
+            </h1>
+            <p className="text-sm sm:text-base text-gray-600">בחרי משחק ותתחילי ליצור קסם בצבעים ✨</p>
+          </div>
         </header>
         <div className="flex flex-col gap-3 sm:gap-5 w-full">
           <button
