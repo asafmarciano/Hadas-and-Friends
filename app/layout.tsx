@@ -15,6 +15,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "הדס וחברים",
   description: "אפליקציית ציור פרטית לילדים",
+  openGraph: {
+    title: "הדס וחברים",
+    description: "אפליקציית ציור פרטית לילדים",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
